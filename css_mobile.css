@@ -7,25 +7,64 @@
 
 body{
     font-family: 'Raleway', Verdana, Tahoma, sans-serif;
+    font-size: 0.8rem;
+}
+
+h2{
+    font-size: 1rem;
 }
 
 aside, footer{
     background-color:#F2F2F2 ;
 }
 
+nav ul{
+    display: flex;
+    list-style-type: none;
+    font-size: 0.9rem;
+    padding-left: 0%;
+}
+
+nav li{
+    width: 45%;
+    text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    color: #0065FC;
+}
+/* Il manque la bordure en bleue */
+
+
+/* Recherche */
+
+#filtres ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+/*footer*/
 footer{
     padding: 2rem 1.5rem 2.5rem 1.5rem
 }
 
 footer h3{
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 0.8rem;
     margin-bottom: 1.5rem;
 }
 
 footer ul{
     list-style-type: none;
-    font-size: 0.9rem;
     padding-left: 0%;
 }
 
