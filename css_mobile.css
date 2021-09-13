@@ -9,14 +9,35 @@ body{
     font-family: 'Raleway', Verdana, Tahoma, sans-serif;
 }
 
+aside, footer{
+    background-color:#F2F2F2 ;
+}
+
 footer{
-    font-size: 0.8em;
+    padding: 2rem 1.5rem 2.5rem 1.5rem
 }
 
 footer h3{
     font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 1.5rem;
 }
 
 footer ul{
     list-style-type: none;
+    font-size: 0.9rem;
+    padding-left: 0%;
+}
+
+footer li{
+    margin-bottom: 0.8rem;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+footer div{
+    margin-bottom: 30px;
 }
