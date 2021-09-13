@@ -31,12 +31,15 @@ nav li{
 }
 
 nav a{
+    display: block;
+    padding-bottom: 1rem;
     text-decoration: none;
     color: black;
 }
 
 nav a:hover{
     color: #0065FC;
+    border-bottom: 0.2rem solid #0065FC;
 }
 /* Il manque la bordure en bleue */
 
