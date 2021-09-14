@@ -10,8 +10,9 @@ body{
     font-size: 0.8rem;
 }
 
-h2{
-    font-size: 1rem;
+#logo img{
+    width: 6rem;
+    height: auto; /* garde le ration lors du redimensionnement de l'image */
 }
 
 aside, footer{
@@ -31,7 +32,7 @@ nav li{
 }
 
 nav a{
-    display: block;
+    display: block; /* Permet à la balise inline a de se comporter comme un block et notamment d'avoir des bordures */
     padding-bottom: 1rem;
     text-decoration: none;
     color: black;
@@ -41,10 +42,36 @@ nav a:hover{
     color: #0065FC;
     border-bottom: 0.2rem solid #0065FC;
 }
-/* Il manque la bordure en bleue */
+
+#inscription{
+    text-decoration: none;
+    color: black;
+}
 
 
 /* Recherche */
+
+form{
+    display: flex;
+    height: auto;
+    border: 0.1rem solid #F2F2F2;
+    padding: 0rem;
+}
+
+form p{
+    width: 2rem; /*A mesurer en flexbox */
+ }
+
+#ville, #rechercher, form p{
+    border: 1px solid black;
+    margin: 0rem;
+    height: 2.5rem;
+}
+
+#rechercher{
+    background-color: #0065FC;
+    color: white;
+}
 
 #filtres ul {
     display: flex;

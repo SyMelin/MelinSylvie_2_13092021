@@ -10,8 +10,9 @@
     <!--En-tête -->
         <header>
             <div>
-                <div id="logo>
-                    <img src="images/ logo/ Reservia@3x.png" alt="logo de Réservia" />
+                <div id="logo">
+                    <img src="images/logo/Reservia@3x.png" alt="logo de Réservia" />
+                </div>
                 <nav>
                     <ul>
                         <li><a href="#hebergements">Hébergements</a></li>
@@ -19,7 +20,7 @@
                     </ul>
                 </nav>
                 <!-- attention, mettre la bonne balise pour s'inscrire -->
-                <p>S'inscrire</p>
+                <p><a id="inscription" href="#">S'inscrire</a></p>
             </div>
             <div>
                 <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
@@ -29,7 +30,23 @@
 
         <!-- Recherche -->
         <section>
-            <!-- champs de saisie du nom de la ville --> <p>Rechercher</p><!-- Attention! Bouton non fonctionnel -->
+            
+            <form method="post" action="#.php" >
+                
+                <p>M</p>
+                <!-- Champs de saisie du nom de la ville -->
+                <p>
+                    <input type="text" name="ville" id="ville" placeholder="Ville" />
+                </p>
+                
+                <!-- Bouton non fonctionnel de recherche -->
+                <p>
+                    <input type="submit" value="Rechercher" id="rechercher" /> 
+                </p>
+
+            </form>
+            
+            
             <div id="filtres">
                 <h4>Filtres</h4>
                 <ul>
