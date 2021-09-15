@@ -1,12 +1,12 @@
-@font-face {
+/*@font-face {
     font-family: 'Raleway';
     src: url('fonts/Raleway-VariableFont_wght.ttf');
     src: url('fonts/Raleway-VariableFont_wght.ttf') format('truetype');
 }
-/* Ne fonctionne pas */
+*/
 
 body{
-    font-family: 'Raleway', Verdana, Tahoma, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 0.8rem;
 }
 
@@ -17,6 +17,10 @@ body{
 
 aside, footer{
     background-color:#F2F2F2 ;
+}
+
+h1{
+    font-weight: bold;
 }
 
 nav ul{
@@ -45,7 +49,9 @@ nav a:hover{
 
 #inscription{
     text-decoration: none;
-    color: black;
+    color: #0065FC;
+    font-weight: bold;
+
 }
 
 
@@ -73,9 +79,13 @@ form p{
     color: white;
 }
 
+/* Filtres */
+
 #filtres ul {
     display: flex;
     flex-wrap: wrap;
+    font-weight: bold;
+    list-style-type: none;
 }
 
 
