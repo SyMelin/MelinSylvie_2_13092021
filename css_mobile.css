@@ -23,6 +23,27 @@ h1{
     font-weight: bold;
 }
 
+.conteneur_head{
+    display: flex;
+    flex-wrap: wrap;
+}
+#logo{
+    order: 1;
+    width: 80%;
+}
+nav{
+    order: 3;
+    width: 100%;
+}
+#inscription{
+    order: 1;
+    width: 20%;
+}
+
+/*nav{
+    align-self: flex-end;
+}*/
+
 nav ul{
     display: flex;
     list-style-type: none;
@@ -47,7 +68,7 @@ nav a:hover{
     border-bottom: 0.2rem solid #0065FC;
 }
 
-#inscription{
+#inscription a{
     text-decoration: none;
     color: #0065FC;
     font-weight: bold;
