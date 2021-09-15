@@ -19,8 +19,9 @@ aside, footer{
     background-color:#F2F2F2 ;
 }
 
-h1{
+h2{
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .conteneur_head{
@@ -75,6 +76,10 @@ nav a:hover{
 
 }
 
+header h2{
+    width: 90%;
+}
+
 
 /* Recherche */
 
@@ -109,8 +114,40 @@ form p{
     list-style-type: none;
 }
 
+/* Hébergement */
 
+.hebergements h2{
+    width: 100%;
+}
 
+.ensemble_cartes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.carte{
+    border-radius: 10%;
+    box-shadow: 0.5rem 0.5rem 1rem 0.5rem #F2F2F2;
+    width: 30%;
+    padding: 0.3rem;
+}
+
+.carte a img{
+    width: 100%;
+    border-radius: 10%;
+}
+
+.carte a h2{
+    font-size: 1rem;
+}
+
+.resultats a{
+    text-decoration: none;
+    color: black;
+}
 
 
 /*footer*/

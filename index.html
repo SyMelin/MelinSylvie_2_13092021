@@ -14,7 +14,7 @@
         <header>
             <div class="conteneur_head">
                 <div id="logo">
-                    <img src="images/logo/Reservia@3x.png" alt="logo de Réservia" />
+                    <img src="images/logo/reservia.svg" alt="logo de Reservia" />
                 </div>
                 <nav>
                     <ul>
@@ -32,19 +32,19 @@
         </header>
 
         <!-- Recherche -->
-        <section>
+        <section class="recherche">
             
             <form method="post" action="#.php" >
                 
                 <p>M</p>
                 <!-- Champs de saisie du nom de la ville -->
                 <p>
-                    <input type="text" name="ville" id="ville" placeholder="Ville" disabled /> <!-- ATTENTION, ce champs de saisie est désactivé avec l'attribut disabled -->
+                    <input type="text" name="ville" id="ville" placeholder="Ville" /> 
                 </p>
                 
                 <!-- Bouton non fonctionnel de recherche -->
                 <p>
-                    <input type="submit" value="Rechercher" id="rechercher" /> 
+                    <input type="submit" value="Rechercher" id="rechercher" disabled /> <!-- ATTENTION, ce bouton est désactivé avec l'attribut disabled -->
                 </p>
 
             </form>
@@ -63,22 +63,36 @@
         </section>
 
         <!-- Hébergements -->
-        <section>
-            <div>
-                <h2 id="hebergements">Hébergements à Marseille</h2>
-                <div>
-                    <div>carte 1</div>
-                    <div>carte 2</div>
-                    <div>carte 3</div>
-                    <div>carte 4</div>
-                    <div>carte 5</div>
-                    <div>carte 6</div>
+        <section class="resultats">
+            <div class="hebergements">
+                <h2>Hébergements à Marseille</h2>
+                <div class="ensemble_cartes">
+                    <div class="carte">
+                        <a href="https:\\www.google.fr">
+                            <img src="images/hebergements/auberge_la_cannebiere.png" alt="Photo Auberge La Cannebière" />
+                            <h3>Auberge la Cannebière</h3>
+                            <p>Nuit à partir de 25€</p>
+                            <p>4ETOILES</p>
+                        </a>
+                    </div>
+                        <div class="carte">
+                            <a href="https:\\www.google.fr">
+                                <img src="#" alt="#" />
+                                <h3>Hôtel du port</h3>
+                                <p>Nuit à partir de 52€</p>
+                                <p>5ETOILES</p>
+                            </a>
+                        </div>
+                        <div class="carte"></div>
+                        <div class="carte"></div>
+                        <div class="carte"></div>
+                        <div class="carte"></div>
                 </div>
                 <p>Afficher plus</p>
             </div>
             <aside>
                 <h2>Les plus populaires</h2>
-                <div>
+                <div class="populaires">
                     <div>carte_bis 1</div>
                     <div>carte_bis 2</div>
                     <div>carte_bis 3</div>
@@ -88,7 +102,7 @@
 
         <!-- Activités -->
         <section>
-            <h2 id="activites">Activités à Marseille</h2>
+            <h2>Activités à Marseille</h2>
             <div>
                 <div>
                     <div>activité 1</div>
