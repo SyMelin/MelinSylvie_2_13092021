@@ -65,6 +65,7 @@ nav li{
 nav a{
     display: block; /* Permet à la balise inline a de se comporter comme un block et notamment d'avoir des bordures */
     padding-bottom: 1rem;
+    border-bottom: 0.2rem solid #FFFFFF;
 }
 
 nav a:hover{
