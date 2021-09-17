@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
+        <!-- Information générale -->
+        <title>Reservia</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="css_mobile.css" />
+        <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve" /> <!-- Description du site qui apparait en dessous du titre de la page lors d'une recherche sur moteur de recherche -->
+        
+        <!-- Liens vers le fichier CSS et, le cas-échéant, les sites d'icônes (icone qui apparait dans la fenêtre, à côté du titre de la page)-->
+        <link rel="stylesheet" type="text/css" href="css_mobile.css" /> <!-- Faut-il ajouter type ??? -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-        <title>Reservia</title>
+    
+        <!-- FACEBOOK metadata -->
+        <!-- TWITTER metadata -->
+
     </head>
     <body>
 
@@ -16,10 +24,10 @@
                 <div id="logo">
                     <img src="images/logo/reservia.svg" alt="logo de Reservia" />
                 </div>
-                <nav>
+                <nav class="nav">
                     <ul>
-                        <li><a href="#hebergements">Hébergements</a></li>
-                        <li><a href="#activites">Activités</a></li>
+                        <li><a href="#hebergements" class="nav__link">Hébergements</a></li>
+                        <li><a href="#activites" class="nav__link">Activités</a></li>
                     </ul>
                 </nav>
                 <!-- attention, mettre la bonne balise pour s'inscrire -->
@@ -36,30 +44,31 @@
             
             <form method="post" action="#.php" >
                 
-                <p>M</p>
+                <i class="form__ico">M</i>
                 <!-- Champs de saisie du nom de la ville -->
                 <p>
-                    <input type="text" name="ville" id="ville" placeholder="Ville" /> 
+                    <input type="search" name="ville" class="form__field" placeholder="Ville" /> 
                 </p>
                 
                 <!-- Bouton non fonctionnel de recherche -->
                 <p>
-                    <input type="submit" value="Rechercher" id="rechercher" disabled /> <!-- ATTENTION, ce bouton est désactivé avec l'attribut disabled -->
+                    <button type="submit" value="Rechercher" class="form__btn" disabled >Rechercher</button> <!-- ATTENTION, ce bouton est désactivé avec l'attribut disabled -->
                 </p>
 
             </form>
             
             
-            <div id="filtres">
+            <div class="filtres">
                 <h4>Filtres</h4>
                 <ul>
-                    <li>Économique</li>
-                    <li>Familial</li>
-                    <li>Romantique</li>
-                    <li>Animaux autorisés</li>
+                    <li class="filtre__critere"><i class="filtre__ico">E</i>Économique</li>
+                    <li class="filtre__critere"><i class="filtre__ico">F</i>Familial</li>
+                    <li class="filtre__critere"><i class="filtre__ico">F</i>Familial</li>
+                    <li class="filtre__critere"><i class="filtre__ico">R</i>Romantique</li>
+                    <li class="filtre__critere"><i class="filtre__ico">A</i>Animaux autorisés</li>
                 </ul>
             </div>
-            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            <i>D</i><data value="500">Plus de 500 logements sont disponibles dans cette ville</data> <!--s génériques à afficher, comme le nombre de client convertis par votre logiciel ou le nombre d’inscrits à votre newsletter. -->
         </section>
 
         <!-- Hébergements -->
@@ -69,7 +78,7 @@
                 <div class="ensemble_cartes">
                     <div class="carte">
                         <a href="https:\\www.google.fr">
-                            <img src="images/hebergements/auberge_la_cannebiere.png" alt="Photo Auberge La Cannebière" />
+                            <img src="images/hebergements/auberge_la_cannebiere.png" alt="Visitez le site de Auberge La Cannebière" />
                             <h3>Auberge la Cannebière</h3>
                             <p>Nuit à partir de 25€</p>
                             <p>4ETOILES</p>

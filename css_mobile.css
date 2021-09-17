@@ -10,6 +10,11 @@ body{
     font-size: 0.8rem;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 #logo img{
     width: 6rem;
     height: auto; /* garde le ration lors du redimensionnement de l'image */
@@ -60,8 +65,6 @@ nav li{
 nav a{
     display: block; /* Permet à la balise inline a de se comporter comme un block et notamment d'avoir des bordures */
     padding-bottom: 1rem;
-    text-decoration: none;
-    color: black;
 }
 
 nav a:hover{
@@ -70,10 +73,8 @@ nav a:hover{
 }
 
 #inscription a{
-    text-decoration: none;
     color: #0065FC;
     font-weight: bold;
-
 }
 
 header h2{
@@ -85,33 +86,82 @@ header h2{
 
 form{
     display: flex;
-    height: auto;
-    border: 0.1rem solid #F2F2F2;
-    padding: 0rem;
+    justify-content: flex-start;
+    align-items: center;
+   /* height: 2.5rem;*/
+    width: 80%;
 }
 
-form p{
-    width: 2rem; /*A mesurer en flexbox */
- }
-
-#ville, #rechercher, form p{
-    border: 1px solid black;
-    margin: 0rem;
+.form__field, .form__btn{
     height: 2.5rem;
+    font-weight: bold;
 }
 
-#rechercher{
+.form__ico{
+    width: 2rem; /*A mesurer en flexbox */
+    height: 2.5rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: #F2F2F2;
+    border: none;
+}
+.form__field{
+    padding-left: 0.7rem;
+    border: 1px solid #F2F2F2;
+}
+
+.form__btn{
+    width: 6rem;
+    color: #FFFFFF;
     background-color: #0065FC;
-    color: white;
+    border: none; 
+    border-radius: 0 0.5rem 0.5rem 0;
+    
 }
 
 /* Filtres */
 
-#filtres ul {
+/* L'aspect des filtres n'ets pa encore le bon. Peut-être revoir le html */
+
+.filtres{
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.filtres h4{
+    padding-top: 0.3rem;
+}
+
+.filtres ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
     font-weight: bold;
     list-style-type: none;
+}
+
+.filtre__ico{
+    padding: 0.6rem 0.9rem 0.6rem 0.9rem;
+    margin-right: 0.5rem;
+    background-color: #deebff;
+    border: 1px solid #F2F2F2;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.filtre__critere{
+    display: flex;
+    align-items: center;
+    margin: 0 2rem 1rem 0;
+    padding: 0 1rem 0 0;
+    border: 2px solid #d9d9d9;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.filtre__critere:hover{
+    color: #FFFFFF;
+    background-color: #0065FC;
+    border-color: #FFFFFF;
 }
 
 /* Hébergement */
@@ -144,11 +194,11 @@ form p{
     font-size: 1rem;
 }
 
-.resultats a{
-    text-decoration: none;
-    color: black;
-}
-
+/*
+.carte-hebergement
+.carte-populaire
+.carte-activite
+*/
 
 /*footer*/
 footer{
@@ -170,10 +220,6 @@ footer li{
     margin-bottom: 0.8rem;
 }
 
-footer a{
-    text-decoration: none;
-    color: black;
-}
 
 footer div{
     margin-bottom: 30px;
