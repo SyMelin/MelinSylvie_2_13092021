@@ -35,8 +35,10 @@ h2{
 }
 #logo{
     order: 1;
-    width: 60%;
+    width: 55%;
 }
+
+/* Pb chevauchement des liens */
 nav{
     order: 2;
    width: 30%;
@@ -72,6 +74,7 @@ nav a:hover{
 
 #inscription{
     padding-top: 0.5em;
+    margin-left: 1em;
 }
 #inscription a{
     color: #0065FC;
@@ -84,6 +87,10 @@ header h2{
 
 /* revoir la condition */
 @media screen and (max-width: 500px) {
+    nav a{
+        border-bottom: 0.2rem solid #F2F2F2;
+    }
+    
     nav a:hover{
         color: #0065FC;
         border-bottom: 0.2rem solid #0065FC;
@@ -92,7 +99,7 @@ header h2{
 
     #logo{
         order: 1;
-        width: 80%;
+        width: 70%;
     }
     nav{
         order: 3;
@@ -100,7 +107,7 @@ header h2{
     }
     #inscription{
         order: 2;
-        width: 20%;
+        width: 25%;
     }
 }
 
@@ -119,12 +126,12 @@ form{
     font-weight: bold;
 }
 
+/* Pb positionnement */
 .form__ico{
     width: 2rem; /*A mesurer en flexbox */
     height: 2.5rem;
     border-radius: 0.5rem 0 0 0.5rem;
     background-color: #F2F2F2;
-    border: none;
 }
 .form__field{
     padding-left: 0.7rem;
@@ -142,7 +149,7 @@ form{
 
 /* Filtres */
 
-/* L'aspect des filtres n'ets pa encore le bon. Peut-être revoir le html */
+/* L'aspect des filtres n'est pas encore le bon. Peut-être revoir le html */
 
 .filtres{
     display: flex;
@@ -213,9 +220,9 @@ form{
     border-radius: 0.7rem 0.7rem 0 0;
 }
 
+/* pb taille block et taille image */
 #image {
     max-width: 100%;
-    max-height: auto;
     object-position: 0 -0.8rem;
 }
 
