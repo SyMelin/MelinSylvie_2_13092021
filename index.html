@@ -3,6 +3,7 @@
     <head>
         <!-- Information générale -->
         <title>Reservia</title>
+        <!-- <meta viewport> -->
         <meta charset="utf-8" />
         <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve" /> <!-- Description du site qui apparait en dessous du titre de la page lors d'une recherche sur moteur de recherche -->
         
@@ -11,12 +12,17 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    
+        
+            <!-- Lien donné par W3C pour les icônes -->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
         <!-- FACEBOOK metadata -->
         <!-- TWITTER metadata -->
 
     </head>
     <body>
+        
 
     <!--En-tête -->
         <header>
@@ -34,7 +40,7 @@
                 <p id="inscription"><a href="#">S'inscrire</a></p>
             </div>
             <div>
-                <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
             </div>
         </header>
@@ -44,15 +50,19 @@
             
             <form method="post" action="#.php" >
                 
-                <i class="form__ico">M</i>
+                <!-- icône localisation -->
+                <div class="form__ico">
+                    <i class="fas fa-map-marker-alt fa-lg"></i>
+                </div>
+                
                 <!-- Champs de saisie du nom de la ville -->
                 <p>
                     <input type="search" name="ville" class="form__field" placeholder="Ville" /> 
                 </p>
                 
                 <!-- Bouton non fonctionnel de recherche -->
-                <p>
-                    <button type="submit" value="Rechercher" class="form__btn" >Rechercher</button>
+                <p class="p__btn">
+                    <button type="submit" value="Rechercher" class="form__btn"><i id="icosearch" class="fas fa-search"></i><span id="textsearch">Rechercher</span></button>
                 </p>
 
             </form>
@@ -60,40 +70,104 @@
             
             <div class="filtres">
                 <h4>Filtres</h4>
-                <ul>
-                    <li class="filtre__critere"><i class="filtre__ico">E</i>Économique</li>
-                    <li class="filtre__critere"><i class="filtre__ico">F</i>Familial</li>
-                    <li class="filtre__critere"><i class="filtre__ico">F</i>Familial</li>
-                    <li class="filtre__critere"><i class="filtre__ico">R</i>Romantique</li>
-                    <li class="filtre__critere"><i class="filtre__ico">A</i>Animaux autorisés</li>
+                <ul class="fa-ul">
+                    <li><span class="filtre-ico"><i class="fas fa-money-bill-wave fa-lg fa-fw"></i></span>Économique</li>
+                    <li><span class="filtre-ico"><i class="fas fa-child fa-lg fa-fw"></i></span>Familial</li>
+                    <li><span class="filtre-ico"><i class="fas fa-heart fa-lg fa-fw"></i></span>Romantique</li>
+                    <li><span class="filtre-ico"><i class="fas fa-dog fa-lg fa-fw"></i></span>Animaux autorisés</li>
                 </ul>
             </div>
-            <i>D</i><data value="500">Plus de 500 logements sont disponibles dans cette ville</data> <!--s génériques à afficher, comme le nombre de client convertis par votre logiciel ou le nombre d’inscrits à votre newsletter. -->
+            
         </section>
-
-        <!-- Hébergements -->
+        
+        <!-- Résultats de la recherche -->
+        
         <section class="resultats">
+
+            <p class="resultats-info"><i class="fas fa-info fa-sm fa-fw"></i><data value="500">Plus de 500 logements sont disponibles dans cette ville</data></p> <!--s génériques à afficher, comme le nombre de client convertis par votre logiciel ou le nombre d’inscrits à votre newsletter. -->
+            
+            <!-- Hébergements -->
             <div id="hebergements">
                 <h2>Hébergements à Marseille</h2>
-                    <div class="ensemble-cartes">
+                    <div class="hebergement__conteneur">
                         <div class="carte"> <!-- Le lien étant dans la div, pour le moment toute la carte n'est pas cliquable, à moins d'ajuster la taille de la div aux éléments -->
-                            <a href="https://www.google.fr">
+                            <a href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
                                 <div class="carte__img">
-                                    <img id="image" src="images/hebergements/auberge_la_cannebiere.png" alt="Visitez le site de Auberge La Cannebière" />
+                                    <img class="image" src="images/hebergements/auberge_la_cannebiere.png" alt="Visitez le site de Auberge La Cannebière" />
                                 </div>
                                 <div class="carte__infos">
                                     <h3>Auberge la Cannebière</h3>
-                                    <p>Nuit à partir de 25€</p>
-                                    <p>4ETOILES</p>
+                                    <p>Nuit à partir de <em class="carte-prix">25</em><em class="carte-devise">€</em></p>
+                                    <p><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--grey"></i></p>
                                 </div>
                             </a>
                         </div>
-                        
+                        <div class="carte"> <!-- Le lien étant dans la div, pour le moment toute la carte n'est pas cliquable, à moins d'ajuster la taille de la div aux éléments -->
+                            <a href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                                <div class="carte__img">
+                                    <img class="image" src="images/hebergements/hotel_du_port.png" alt="Visitez le site de Hôtel du port" />
+                                </div>
+                                <div class="carte__infos">
+                                    <h3>Hôtel du port</h3>
+                                    <p>Nuit à partir de 52<em class="carte-devise">€</em></p>
+                                    <p><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carte"> <!-- Le lien étant dans la div, pour le moment toute la carte n'est pas cliquable, à moins d'ajuster la taille de la div aux éléments -->
+                            <a href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                                <div class="carte__img">
+                                    <img class="image" src="images/hebergements/hotel_les_mouettes.png" alt="Visitez le site de Hôtel les mouettes" />
+                                </div>
+                                <div class="carte__infos">
+                                    <h3>Hôtel les mouettes</h3>
+                                    <p>Nuit à partir de 76<em class="carte-devise">€</em></p>
+                                    <p><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--grey"></i></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carte"> <!-- Le lien étant dans la div, pour le moment toute la carte n'est pas cliquable, à moins d'ajuster la taille de la div aux éléments -->
+                            <a href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                                <div class="carte__img">
+                                    <img class="image" src="images/hebergements/hotel_de_la_mer.png" alt="Visitez le site de Hôtel de la mer" />
+                                </div>
+                                <div class="carte__infos">
+                                    <h3>Hôtel de la mer</h3>
+                                    <p>Nuit à partir de 46<em class="carte-devise">€</em></p>
+                                    <p><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--grey"></i><i class="fas fa-star star--grey"></i></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carte"> <!-- Le lien étant dans la div, pour le moment toute la carte n'est pas cliquable, à moins d'ajuster la taille de la div aux éléments -->
+                            <a href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                                <div class="carte__img">
+                                    <img class="image" src="images/hebergements/auberge_le_panier.png" alt="Visitez le site de Auberge Le Panier" />
+                                </div>
+                                <div class="carte__infos">
+                                    <h3>Auberge Le Panier</h3>
+                                    <p>Nuit à partir de <em class="carte-prix">23</em><em class="carte-devise">€</em></p>
+                                    <p><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--grey"></i></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carte"> <!-- Le lien étant dans la div, pour le moment toute la carte n'est pas cliquable, à moins d'ajuster la taille de la div aux éléments -->
+                            <a href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                                <div class="carte__img">
+                                    <img class="image" src="images/hebergements/hotel_chez_amina.png" alt="Visitez le site de Hôtel chez Amina" />
+                                </div>
+                                <div class="carte__infos">
+                                    <h3>Hôtel chez Amina</h3>
+                                    <p>Nuit à partir de 96<em class="carte-devise">€</em></p>
+                                    <p><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i></p>
+                                </div>
+                            </a>
+                        </div>                        
                     </div>    
                 <p>Afficher plus</p>
             </div>
             <aside>
                 <h2>Les plus populaires</h2>
+                <i class="fas fa-chart-line fa-lg fa-fw"></i>
                 <div class="populaires">
                     <div>carte_bis 1</div>
                     <div>carte_bis 2</div>

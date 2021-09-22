@@ -15,18 +15,19 @@ a{
     color: black;
 }
 
-#logo img{
-    width: 6rem;
-    height: auto; /* garde le ration lors du redimensionnement de l'image */
-}
-
+header{}
 aside, footer{
     background-color:#F2F2F2 ;
 }
 
-h2{
+h1, h2{
     font-weight: bold;
     font-size: 1.2rem;
+}
+
+#logo img{
+    width: 6rem;
+    height: auto; /* garde le ration lors du redimensionnement de l'image */
 }
 
 .conteneur_head{
@@ -79,9 +80,10 @@ nav a:hover{
 #inscription a{
     color: #0065FC;
     font-weight: bold;
+    font-size: 0.9rem;
 }
 
-header h2{
+header h1{
     width: 90%;
 }
 
@@ -118,33 +120,61 @@ form{
     justify-content: flex-start;
     align-items: center;
    /* height: 2.5rem;*/
-    width: 80%;
 }
 
 .form__field, .form__btn{
-    height: 2.5rem;
-    font-weight: bold;
+    height: 2.8rem;
 }
 
 /* Pb positionnement */
 .form__ico{
-    width: 2rem; /*A mesurer en flexbox */
-    height: 2.5rem;
-    border-radius: 0.5rem 0 0 0.5rem;
+    width: 2.8rem; /*A mesurer en flexbox */
+    height: 2rem;
+    border-radius: 0.8rem 0 0 0.8rem;
     background-color: #F2F2F2;
+    text-align: center;
+    padding-top: 0.8rem;
 }
+
 .form__field{
     padding-left: 0.7rem;
     border: 1px solid #F2F2F2;
+    border-right: none;
 }
 
 .form__btn{
-    width: 6rem;
     color: #FFFFFF;
     background-color: #0065FC;
-    border: none; 
-    border-radius: 0 0.5rem 0.5rem 0;
-    
+    border: none;
+}
+
+
+@media screen and (max-width: 500px) {
+    #textsearch{
+        display: none;
+    }
+    .form__btn{
+        width: 3rem;
+        height: 2.7rem;
+        border-radius: 0.8rem;
+        
+    }
+    .p__btn{
+        border: 1px solid #F2F2F2;
+        border-left: none;
+        border-right: none;
+        border-radius: 0 0.8rem 0.8rem 0;
+        margin: 0;
+    }
+}
+@media screen and (min-width: 501px) {
+    #icosearch{
+        display: none;
+    }
+    .form__btn{
+        width: 6rem;
+        border-radius: 0 0.8rem 0.8rem 0;
+    }
 }
 
 /* Filtres */
@@ -154,43 +184,75 @@ form{
 .filtres{
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: baseline;
 }
 
 .filtres h4{
-    padding-top: 0.3rem;
+        margin-bottom: 1rem;
+        margin-right: 2rem;
 }
+
 
 .filtres ul {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     flex-wrap: wrap;
     font-weight: bold;
     list-style-type: none;
+    margin-left: 0;
 }
 
-.filtre__ico{
-    padding: 0.6rem 0.9rem 0.6rem 0.9rem;
-    margin-right: 0.5rem;
+.filtre-ico{
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    margin: 0 0.7rem 0 -0.1rem;
     background-color: #deebff;
-    border: 1px solid #F2F2F2;
+    border: 4px solid #deebff;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    color: #0065FC;
 }
 
-.filtre__critere{
-    display: flex;
-    align-items: center;
+.filtres li{
+    height: 1rem;
+    padding: 0.6rem 0.7rem 0.6rem 0;
     margin: 0 2rem 1rem 0;
-    padding: 0 1rem 0 0;
     border: 2px solid #d9d9d9;
+    border-left: none;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 
-.filtre__critere:hover{
+.filtres li:hover{
     color: #FFFFFF;
     background-color: #0065FC;
-    border-color: #FFFFFF;
+    border-color: #0065FC;
+}
+
+@media screen and (max-width: 500px) {
+    .filtres{
+        flex-direction: column ;
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+
+    .filtres h4{
+        margin-bottom: 0;
+    }
+}
+
+/*Résultats de la recherche */
+
+.resultats-info{
+    margin-bottom: 1.5rem;
+}
+
+data{
+    vertical-align: middle;
+}
+
+.fa-info{
+    padding: 0.3rem 0.2rem 0.3rem 0.2rem;
+    margin-right: 0.5rem;
+    border: 1px solid #F2F2F2;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    color: #0065FC;
 }
 
 /* Hébergement */
@@ -199,13 +261,39 @@ form{
     width: 100%;
 }
 
-.ensemble-cartes{
+.hebergement__conteneur{
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
+.carte{
+    width: 30%;
+    height: auto;
+    border-radius: 0.7rem;
+    box-shadow: 0.5rem 0.5rem 1rem 0.5rem #F2F2F2;
+    padding: 0.2rem 0.2rem 0 0.2rem;
+    
+}
+]
+
+.carte-img{
+    width: 90%;
+    /*height: 15%;*/
+}
+
+.image{
+    width: 100%;
+    height: 4.5rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.7rem 0.7rem 0 0;
+}
+
+
+/*
 .carte{
     border-radius: 0.7rem;
     box-shadow: 0.5rem 0.5rem 1rem 0.5rem #F2F2F2;
@@ -220,20 +308,40 @@ form{
     border-radius: 0.7rem 0.7rem 0 0;
 }
 
-/* pb taille block et taille image */
 #image {
     max-width: 100%;
     object-position: 0 -0.8rem;
 }
-
-
-.carte__infos h3{
-    font-size: 0.8rem;
-}   
+*/
 
 .carte__infos{
     font-size: 0.7em;
     margin: 0 auto 0 0.3rem;
+}
+
+.carte__infos h3{
+    font-size: 0.7rem;
+    margin: 0;
+}
+
+.carte__infos p{
+    margin: 0.3rem 0 0.3rem 0;
+}
+.carte-prix, .carte-devise{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.star--blue{
+    color: #0065FC;
+}
+
+.star--grey{
+    color: #F2F2F2;
+}
+
+#hebergements p{
+    font-weight: bold;
 }
 
 /*
@@ -313,4 +421,27 @@ footer div{
         display: flex;
         flex-direction: column;
     }
+}
+
+
+
+
+/* A supprimer */
+.corte{
+    width: 30%;
+    height: auto;
+}
+]
+
+.corte-img{
+    width: 90%;
+    /*height: 15%;*/
+   
+}
+
+#imoge{
+    width: 100%;
+    height: 5rem;
+    object-fit: cover;
+    object-position: center;
 }
