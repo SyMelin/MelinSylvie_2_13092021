@@ -22,7 +22,7 @@ aside, footer{
 
 h1, h2{
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 #logo img{
@@ -270,14 +270,23 @@ data{
 }
 
 .carte{
-    width: 30%;
+    /*width: 30%;*/
     height: auto;
     border-radius: 0.7rem;
     box-shadow: 0.5rem 0.5rem 1rem 0.5rem #F2F2F2;
     padding: 0.2rem 0.2rem 0 0.2rem;
+    background-color: #FFFFFF;
+    margin-bottom: 0.5rem;
     
 }
-]
+
+.hebergement__conteneur .carte{
+    width: 30%;
+}
+
+/*.carte a{
+    display: block;
+}*/
 
 .carte-img{
     width: 90%;
@@ -336,12 +345,46 @@ data{
     color: #0065FC;
 }
 
-.star--grey{
+.star--gray{
     color: #F2F2F2;
 }
 
 #hebergements p{
     font-weight: bold;
+}
+
+/* Les plus populaires */
+
+.populaires{
+    width: 50%;
+}
+
+.populaires__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.populaires{
+    padding: 0.5rem;
+}
+.populaires .carte a{
+    display: flex;
+}
+
+.populaires .carte__img{
+    width: 30%;
+}
+.populaires .carte .image{
+    border-radius: 0.7rem 0 0 0.7rem;
+}
+
+.populaires .etoiles{
+    margin-top: 1.7rem;
+}
+.populaires .carte__infos{
+    margin-left: 1rem;
 }
 
 /*
@@ -421,27 +464,4 @@ footer div{
         display: flex;
         flex-direction: column;
     }
-}
-
-
-
-
-/* A supprimer */
-.corte{
-    width: 30%;
-    height: auto;
-}
-]
-
-.corte-img{
-    width: 90%;
-    /*height: 15%;*/
-   
-}
-
-#imoge{
-    width: 100%;
-    height: 5rem;
-    object-fit: cover;
-    object-position: center;
 }
