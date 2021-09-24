@@ -1,13 +1,9 @@
-/*@font-face {
-    font-family: 'Raleway';
-    src: url('fonts/Raleway-VariableFont_wght.ttf');
-    src: url('fonts/Raleway-VariableFont_wght.ttf') format('truetype');
-}
-*/
-
 body{
     font-family: 'Raleway', sans-serif;
     font-size: 0.8rem;
+    width: 100%;
+    border: 1px solid black;
+    margin: auto;
 }
 
 a{
@@ -15,7 +11,20 @@ a{
     color: black;
 }
 
-header{}
+header{
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    border: 1px solid black;
+}
+
+#logo{
+    margin-left: 1rem;
+    /*border: 1px solid black;*/
+}
+
+.slogan, .recherche{
+    padding: 1rem;
+}
+
 aside, footer{
     background-color:#F2F2F2 ;
 }
@@ -33,37 +42,46 @@ h1, h2{
 .conteneur_head{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 #logo{
     order: 1;
-    width: 55%;
+    flex: 3;
+    padding-top: 1.5rem;
+    padding-bottom: 0.8rem;
 }
 
 /* Pb chevauchement des liens */
 nav{
     order: 2;
-   width: 30%;
+    width: 50%;
 }
 #inscription{
     order: 3;
-    width: 10%;
+    padding-top: 1.5rem;
+    padding-bottom: 0.8rem;
 }
 
 nav ul{
     display: flex;
     list-style-type: none;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding-left: 0%;
+    justify-content: flex-end;
+    /*border: 1px solid black;*/
+    align-items: center;
 }
 
 nav li{
     width: 50%;
     text-align: center;
+    margin-right: 2rem;
 }
 
 nav a{
     display: block; /* Permet à la balise inline a de se comporter comme un block et notamment d'avoir des bordures */
-    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0.8rem;
     border-top: 0.2rem solid #FFFFFF;
     border-bottom: 0.2rem solid #FFFFFF;
 }
@@ -74,8 +92,12 @@ nav a:hover{
 }
 
 #inscription{
-    padding-top: 0.5em;
-    margin-left: 1em;
+    /*padding-top: 0.5em;*/
+   /* margin-left: 1em;*/
+   /* margin-right: 0;*/
+    border: 1px solid black;
+    text-align: right;
+    margin-right: 1rem;
 }
 #inscription a{
     color: #0065FC;
@@ -84,13 +106,17 @@ nav a:hover{
 }
 
 header h1{
-    width: 90%;
+    width: 80%;
 }
 
 /* revoir la condition */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     nav a{
         border-bottom: 0.2rem solid #F2F2F2;
+    }
+
+    nav li{
+        margin-right: 0;
     }
     
     nav a:hover{
@@ -113,23 +139,33 @@ header h1{
     }
 }
 
+.slogan{
+    /*border: 1px solid black;*/
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 /* Recherche */
+
+.recherche{
+    padding-top: 0;
+   /* border: 1px solid black;*/
+}
 
 form{
     display: flex;
-    justify-content: flex-start;
     align-items: center;
    /* height: 2.5rem;*/
 }
 
 .form__field, .form__btn{
-    height: 2.8rem;
+    height: 2.5rem;
 }
 
 /* Pb positionnement */
 .form__ico{
-    width: 2.8rem; /*A mesurer en flexbox */
-    height: 2rem;
+    width: 2.6rem; /*A mesurer en flexbox */
+    height: 1.7rem;
     border-radius: 0.8rem 0 0 0.8rem;
     background-color: #F2F2F2;
     text-align: center;
@@ -140,23 +176,28 @@ form{
     padding-left: 0.7rem;
     border: 1px solid #F2F2F2;
     border-right: none;
+    width: 100%;
+}
+
+.p__field{
+    width: 100%;
 }
 
 .form__btn{
     color: #FFFFFF;
     background-color: #0065FC;
-    border: none;
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     #textsearch{
         display: none;
     }
     .form__btn{
-        width: 3rem;
-        height: 2.7rem;
+        width: 2.4rem;
+        height: 2.4rem;
         border-radius: 0.8rem;
+        border: 1px solid #0065FC;
         
     }
     .p__btn{
@@ -167,9 +208,12 @@ form{
         margin: 0;
     }
 }
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 601px) {
     #icosearch{
         display: none;
+    }
+    .p__field{
+        width: 11rem;
     }
     .form__btn{
         width: 6rem;
@@ -199,6 +243,7 @@ form{
     font-weight: bold;
     list-style-type: none;
     margin-left: 0;
+    margin-bottom: 0;
 }
 
 .filtre-ico{
@@ -212,8 +257,8 @@ form{
 
 .filtres li{
     height: 1rem;
-    padding: 0.6rem 0.7rem 0.6rem 0;
-    margin: 0 2rem 1rem 0;
+    padding: 0.6rem 0.8rem 0.6rem 0;
+    margin: 0 1.5rem 1rem 0;
     border: 2px solid #d9d9d9;
     border-left: none;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
@@ -225,22 +270,21 @@ form{
     border-color: #0065FC;
 }
 
-@media screen and (max-width: 500px) {
-    .filtres{
+@media screen and (max-width: 600px) {
+   /* .filtres{
         flex-direction: column ;
         justify-content: flex-start;
         align-items: baseline;
-    }
+    }*/
 
     .filtres h4{
         margin-bottom: 0;
     }
 }
 
-/*Résultats de la recherche */
-
 .resultats-info{
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+    /*border: 1px solid black;*/
 }
 
 data{
@@ -250,91 +294,144 @@ data{
 .fa-info{
     padding: 0.3rem 0.2rem 0.3rem 0.2rem;
     margin-right: 0.5rem;
+    float: left;
     border: 1px solid #F2F2F2;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
     color: #0065FC;
+}
+/*Résultats de la recherche */
+
+.resultats{
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: flex-start;
+    border: 1px solid black;
+}
+
+#hebergements{
+    order: 2;
+}
+
+.populaires{
+    order: 1;
+}
+
+@media screen and (min-width: 951px){
+    .resultats{
+        display: flex;
+        flex-flow: wrap row;
+    }
+    #hebergements{
+        order: 1;
+        flex: 3;
+        padding-top: 1rem;
+        border-radius: 2rem;
+        background-color: #F2F2F2;
+        margin: 1rem;
+    }
+    .populaires{
+        order: 2;
+        flex: 1;
+        border-radius: 2rem;
+        margin: 1rem;
+    }
+
 }
 
 /* Hébergement */
 
 #hebergements h2{
-    width: 100%;
+    padding: 0.8rem 0 0.8rem 0;
+    border: 1px solid black;
 }
 
-.hebergement__conteneur{
+/*.hebergement__conteneur{
     width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+}*/
+/*
+@media screen and (min-width: 420px) {
+    .hebergement__conteneur{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}*/
+
+@media screen and (min-width: 951px) {
+    .hebergement__conteneur{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
 
 .carte{
-    /*width: 30%;*/
     height: auto;
     border-radius: 0.7rem;
     box-shadow: 0.5rem 0.5rem 1rem 0.5rem #F2F2F2;
-    padding: 0.2rem 0.2rem 0 0.2rem;
+    padding: 0.2rem 0.2rem 0.5rem 0.2rem;
     background-color: #FFFFFF;
     margin-bottom: 0.5rem;
     
 }
 
-.hebergement__conteneur .carte{
-    width: 30%;
+.hebergement__conteneur{
+    width: 90%;
+    margin: auto;
 }
 
-/*.carte a{
+@media screen and (min-width: 601px) {
+    .hebergement__conteneur .carte{
+        width: 30%;
+    }
+}
+
+
+
+.carte a{
     display: block;
-}*/
+}
 
 .carte-img{
     width: 90%;
     /*height: 15%;*/
 }
 
+
 .image{
     width: 100%;
-    height: 4.5rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
+    height: 7rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
     object-fit: cover;
     object-position: center;
     border-radius: 0.7rem 0.7rem 0 0;
 }
 
-
-/*
-.carte{
-    border-radius: 0.7rem;
-    box-shadow: 0.5rem 0.5rem 1rem 0.5rem #F2F2F2;
-    width: 30%;
-    padding: 0.2rem;
+@media screen and (max-width: 600px){
+    .image{
+        height: 6.5rem;
+    }
 }
-
-.carte__img{
-    width: 100%;
-    height: 30%;
-    overflow: hidden;
-    border-radius: 0.7rem 0.7rem 0 0;
-}
-
-#image {
-    max-width: 100%;
-    object-position: 0 -0.8rem;
-}
-*/
 
 .carte__infos{
-    font-size: 0.7em;
-    margin: 0 auto 0 0.3rem;
+    font-size: 0.7rem;
+    margin: 0 auto auto 0.3rem;
 }
 
 .carte__infos h3{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin: 0;
 }
 
 .carte__infos p{
-    margin: 0.3rem 0 0.3rem 0;
+    margin: 0.3rem 0 auto 0;
 }
 .carte-prix, .carte-devise{
     font-weight: bold;
@@ -349,43 +446,90 @@ data{
     color: #F2F2F2;
 }
 
-#hebergements p{
+.plus{
     font-weight: bold;
+    margin: 1rem;
+    border: 1px solid black;
 }
+
+
 
 /* Les plus populaires */
-
-.populaires{
-    width: 50%;
-}
 
 .populaires__head{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    border: 1px solid black;
 }
 
 .populaires{
-    padding: 0.5rem;
-}
-.populaires .carte a{
-    display: flex;
+    padding: 2.5rem;
 }
 
-.populaires .carte__img{
-    width: 30%;
+.populaires .carte {
+    display: flex;
+    border: 1px solid black;
 }
+
+/*.populaires .carte__img{
+    width: 30%;
+}*/
 .populaires .carte .image{
     border-radius: 0.7rem 0 0 0.7rem;
+    width: 5.8rem;  
+    height: 6.5rem;
+}
+
+/*.populaires .etoiles{
+    padding-top: 1.5rem;
+}*/
+
+
+.populaires .carte__infos{
+    width: 100%;
+    height: 5.5rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-right: 0.5rem;
 }
 
 .populaires .etoiles{
-    margin-top: 1.7rem;
+    position: absolute;
+    bottom: 0;
+    border: 1px solid black;
 }
-.populaires .carte__infos{
-    margin-left: 1rem;
+
+@media (min-width: 601px) and (max-width: 950px){
+    .populaires__conteneur{
+        display: flex;
+        justify-content: space-between;
+    }
+    .populaires .carte{
+        border: 1px solid black;
+        width: 30%;
+    }
+    .hebergement__conteneur{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 .carte-hebergement
@@ -395,35 +539,49 @@ data{
 
 /* Activités */
 
-#activites h2, #activites div{
+/*#activites h2, #activites div{
     border: 1px solid black;
+}*/
+
+#activites .carte{
+    padding: 0;
+    height: 13rem;
 }
 
-#activites{
-    display: grid;
-    grid-template: 2em 10em 10em 10em / 1fr 1fr 1fr 1fr;
-    grid-gap: 1.5em
+#activites .image{
+    height: 9rem;
+    object-fit: cover;
+    /*object-position: ;*/
 }
 
-#activites h2{
-    grid-column: 1 / -1;
-}
 
-#one{
-    grid-row: 2 / 4;
+@media screen and (min-width: 600px) {
+    #activites{
+        display: grid;
+        grid-template: 2em 10em 10em 10em / 1fr 1fr 1fr 1fr;
+        grid-gap: 1.5em
+    }
 
-}
+    #activites h2{
+        grid-column: 1 / -1;
+    }
 
-#two{
-    grid-row: 2 / 2;
-}
+    #one{
+        grid-row: 2 / 4;
 
-#three{
-    grid-row: 3 / 4;
-}
+    }
 
-#four{
-    grid-row: 2 / 4;
+    #two{
+        grid-row: 2 / 2;
+    }
+
+    #three{
+        grid-row: 3 / 4;
+    }
+
+    #four{
+        grid-row: 2 / 4;
+    }
 }
 
 
@@ -459,7 +617,7 @@ footer div{
     margin-bottom: 30px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     footer{
         display: flex;
         flex-direction: column;
