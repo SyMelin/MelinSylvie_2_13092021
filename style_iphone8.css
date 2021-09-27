@@ -1,0 +1,155 @@
+body{
+    background-color: #FFFFFF;
+}
+.container{
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+.populaires, footer{
+    background-color: #f2f2f2;
+}
+
+h1, h2{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* En-tête */
+
+header{
+   border: 1px solid black;
+}
+
+.header__top{
+    /*border: 1px solid black;*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#logo{
+    order: 1;
+    min-width: 65%;
+}
+#logo img{
+   /* width: 5.875rem;
+    height: auto; /* garde le ration lors du redimensionnement de l'image */
+    height: 2rem;
+    width: auto;
+}
+
+nav{
+    order: 3;
+    flex: 3;
+    /*border: 1px solid black;*/
+    margin: auto -1.2rem auto -1.2rem;
+}
+
+nav ul{
+    display: flex;
+    padding-left: 0%;
+    /*border: 1px solid black;*/
+}
+
+nav li{
+    width: 50%;
+    /*border: 1px solid black;*/
+    text-align: center;
+
+}
+
+nav a{
+    display: block;
+    border-top: 0.2rem solid #FFFFFF;
+    border-bottom: 0.2rem solid #f2f2f2;
+    padding-bottom: 0.8rem;
+}
+nav a:hover{
+    color: #0065FC;
+    border-bottom: 0.2rem solid #0065FC;
+}
+
+#inscription{
+    order: 2;
+    width: 25%;
+    font-size: 0.8rem;
+    text-align: right;
+    /*border: 1px solid black;*/
+    margin-left: 1.2rem;
+
+}
+
+#inscription a{
+    color: #0065FC;
+    font-weight: bold;
+}
+
+/* Recherche */
+
+form{
+    display: flex;
+    align-items: center;
+   /* height: 2.5rem;*/
+}
+
+.form__field, .form__btn{
+    height: 3rem;
+}
+
+.form__ico{
+    width: 3.2rem;
+    height: 2rem;
+    border-radius: 1rem 0 0 1rem;
+    background-color: #F2F2F2;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.form__field{
+    padding-left: 0.7rem;
+    border: 1px solid #F2F2F2;
+    border-right: none;
+    width: 100%;
+}
+
+.p__field{
+    width: 100%;
+
+}
+
+.form__btn{
+    color: #FFFFFF;
+    background-color: #0065FC;
+}
+
+@media screen and (max-width: 767px) {
+    #textsearch{
+        display: none;
+    }
+    .form__btn{
+        width: 2.9rem;
+        height: 2.9rem;
+        border-radius: 1rem;
+        border: 1px solid #0065FC;
+        
+    }
+    .p__btn{
+        border: 1px solid #F2F2F2;
+        border-left: none;
+        border-right: none;
+        border-radius: 0 0.8rem 0.8rem 0;
+        margin: 0;
+    }
+}

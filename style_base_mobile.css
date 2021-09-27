@@ -35,12 +35,9 @@ h1, h2{
     font-size: 0.9rem;
 }
 
-#logo img{
-    width: 6rem;
-    height: auto; /* garde le ration lors du redimensionnement de l'image */
-}
 
-.conteneur_head{
+
+.header__top{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -51,7 +48,10 @@ h1, h2{
     padding-top: 1.5rem;
     padding-bottom: 0.8rem;
 }
-
+#logo img{
+    width: 6rem;
+    height: auto; /* garde le ration lors du redimensionnement de l'image */
+}
 /* Pb chevauchement des liens */
 nav{
     order: 2;

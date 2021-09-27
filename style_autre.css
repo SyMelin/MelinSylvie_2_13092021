@@ -40,7 +40,7 @@ h1, h2{
     height: auto; /* garde le ration lors du redimensionnement de l'image */
 }
 
-.conteneur_head{
+.header__top{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -92,10 +92,7 @@ nav a:hover{
 }
 
 #inscription{
-    /*padding-top: 0.5em;*/
-   /* margin-left: 1em;*/
-   /* margin-right: 0;*/
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     text-align: right;
     margin-right: 1rem;
 }
@@ -163,7 +160,7 @@ form{
 
 /* Pb positionnement */
 .form__ico{
-    width: 2.6rem; /*A mesurer en flexbox */
+    width: 2.6rem;
     height: 1.7rem;
     border-radius: 0.8rem 0 0 0.8rem;
     background-color: #F2F2F2;

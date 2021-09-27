@@ -1,0 +1,100 @@
+body{
+    background-color: #FFFFFF;
+    border: 1px solid black;
+}
+.container{
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.populaires, footer{
+    background-color: #f2f2f2;
+}
+
+h1, h2{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/* En-tête */
+
+header{
+    border: 1px solid black;
+}
+
+.header__top{
+    /*border: 1px solid black;*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#logo{
+    order: 1;
+    flex: 1;
+    border: 1px solid black;
+    padding-top: 2.5rem;
+}
+#logo img{
+    width: 6rem;
+    height: auto; /* garde le ration lors du redimensionnement de l'image */
+}
+
+nav{
+    order: 2;
+    border: 1px solid black;
+    margin: 0 -1.2rem 0 -1.2rem;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+    border: 1px solid black;
+}
+
+nav li{
+    /*border: 1px solid black;*/
+    /*text-align: center;*/
+}
+
+nav a{
+    display: block;
+    border-top: 0.2rem solid #FFFFFF;
+    border-bottom: 0.2rem solid #FFFFFF;
+    padding-top: 3rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-right: 1.1rem;
+}
+nav a:hover{
+    color: #0065FC;
+    border-top: 0.2rem solid #0065FC;
+}
+
+#inscription{
+    order: 3;
+    text-align: right;
+    padding-top: 3rem;
+    /*border: 1px solid black;*/
+    margin-left: 1.2rem;
+   }
+#inscription a{
+    color: #0065FC;
+    font-weight: bold;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+/* Recherche */
