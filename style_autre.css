@@ -1,7 +1,7 @@
 .container{
     font-family: 'Raleway', sans-serif;
-    font-size: 0.7rem;
-    width: 100%;
+    font-size: 0.8rem;
+    width: 1340px;
     border: 1px solid black;
     margin: auto;
     background-color: #FFFFFF;
@@ -32,7 +32,7 @@ aside, footer{
 
 h1, h2{
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 
 #logo img{
@@ -66,7 +66,6 @@ nav{
 nav ul{
     display: flex;
     list-style-type: none;
-    font-size: 0.8rem;
     padding-left: 0%;
     justify-content: flex-end;
     /*border: 1px solid black;*/
@@ -103,7 +102,6 @@ nav a:hover{
 #inscription a{
     color: #0065FC;
     font-weight: bold;
-    font-size: 0.9rem;
 }
 
 header h1{
@@ -111,7 +109,7 @@ header h1{
 }
 
 /* revoir la condition */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
     nav a{
         border-bottom: 0.2rem solid #F2F2F2;
     }
@@ -190,7 +188,7 @@ form{
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
     #textsearch{
         display: none;
     }
@@ -209,7 +207,7 @@ form{
         margin: 0;
     }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 601px) {
     #icosearch{
         display: none;
     }
@@ -271,7 +269,7 @@ form{
     border-color: #0065FC;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
    .filtres{
         flex-direction: column ;
         justify-content: flex-start;
@@ -280,7 +278,6 @@ form{
 
     .filtres h4{
         margin-bottom: 0;
-        font-size: 0.8rem;
     }
 }
 
@@ -318,7 +315,7 @@ data{
     order: 1;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 951px){
     .resultats{
         display: flex;
         flex-flow: wrap row;
@@ -365,7 +362,7 @@ data{
     }
 }*/
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 951px) {
     .hebergement__conteneur{
         width: 80%;
         display: flex;
@@ -390,7 +387,7 @@ data{
     margin: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 601px) {
     .hebergement__conteneur .carte{
         width: 30%;
     }
@@ -416,7 +413,7 @@ data{
     border-radius: 0.7rem 0.7rem 0 0;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 600px){
     .image{
         height: 6.5rem;
     }
@@ -428,7 +425,6 @@ data{
 }
 
 .carte__infos h3{
-    font-size: 0.8rem;
     margin: 0;
 }
 
@@ -505,7 +501,7 @@ data{
     border: 1px solid black;
 }
 
-@media (min-width: 601px) and (max-width: 991px){
+@media (min-width: 601px) and (max-width: 950px){
     .populaires__conteneur{
         display: flex;
         justify-content: space-between;
@@ -519,16 +515,6 @@ data{
         flex-wrap: wrap column;
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -562,12 +548,11 @@ data{
 }
 
 #activites .carte h3{
-    font-size: 0.7rem;
     margin: 0;
     padding: 0.5rem;
 }
 
-@media (min-width: 768px) and (max-width: 991px){
+@media (min-width: 601px) and (max-width: 950px){
     .activites__conteneur{
         display: flex;
         flex-flow: wrap row;
@@ -621,7 +606,6 @@ footer{
 
 footer h3{
     font-weight: bold;
-    font-size: 0.8rem;
     margin-bottom: 1.5rem;
 }
 
