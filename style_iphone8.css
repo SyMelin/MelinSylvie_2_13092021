@@ -19,6 +19,10 @@ h1, h2{
     font-size: 1rem;
 }
 
+#hebergements h2, .populaires__head, #activites h2{
+    margin-top: 2.5rem;
+}
+
 a{
     text-decoration: none;
     color: black;
@@ -260,8 +264,13 @@ font-size: 1.125rem;
     order: 2;
 }
 
-#hebergements h2, .populaires__head{
-    margin-top: 2.5rem;
+
+/* Hébergements trouvés */
+
+.plus{
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
 }
 
 
@@ -301,9 +310,10 @@ font-size: 1.125rem;
     height: auto;
     border: 1px solid #F2F2F2;
     border-radius: 1rem;
-    box-shadow: 0.5rem 0.5rem 0.7rem 0.5rem #F2F2F2;
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #F2F2F2;
     padding: 0.3rem;
     background-color: #FFFFFF;
+    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -375,4 +385,62 @@ font-size: 1.125rem;
 
 .carte--populaire .etoiles{
     padding-bottom: 0.5rem;
+}
+
+/*Mise en forme d'une carte d'activité */
+
+.carte--activite{
+    padding: 0;
+    margin-top: 1.25rem;
+}
+
+.carte--activite h3{
+    font-size: 0.8rem;
+    padding-left: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+
+/*  Activités */
+
+#activites{
+    margin-bottom: 3em;
+}
+
+
+/* Pied-de-page */
+
+footer{
+    padding-top: 3rem;
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
+    /*padding: 1.5rem 1.5rem 0 1.5rem;*/
+    display: flex;
+}
+
+footer h3{
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+footer div{
+    min-width: 33%;
+    margin: 0 1.875rem 1.875rem 1.875rem;
+}
+
+footer ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+footer li{
+    margin-bottom: 0.8rem;
+}
+
+@media screen and (max-width: 600px) {
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
 }
