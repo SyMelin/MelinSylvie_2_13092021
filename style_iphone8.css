@@ -6,6 +6,8 @@ body{
     font-size: 0.75rem;
     padding-left: 1.2rem;
     padding-right: 1.2rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
 }
 
 .populaires, footer{
@@ -29,7 +31,7 @@ ul{
 /* En-tête */
 
 header{
-   border: 1px solid black;
+   /*border: 1px solid black;*/
 }
 
 .header__top{
@@ -96,7 +98,7 @@ nav a:hover{
     font-weight: bold;
 }
 
-/* Recherche */
+/* Recherche - Formulaire */
 
 form{
     display: flex;
@@ -105,29 +107,40 @@ form{
 }
 
 .form__field, .form__btn{
-    height: 3rem;
+    height: 2.9rem;
+
+}
+
+.form .fa{
+font-size: 1.125rem;
 }
 
 .form__ico{
-    width: 3.2rem;
+    width: 3.25rem;
     height: 2rem;
     border-radius: 1rem 0 0 1rem;
     background-color: #F2F2F2;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0.92rem;
 }
 
 .form__field{
-    padding-left: 0.7rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding-left: 1.1rem;
     border: 1px solid #F2F2F2;
     border-right: none;
     width: 100%;
 }
 
-.p__field{
-    width: 100%;
 
+
+.form__field:focus{
+    outline: 1px solid #0065FC;
 }
+/* Attention : Removing outlines in CSS creates issues for people navigating the web with a keyboard. */
+/* Il faut le remplacer par un autre indicateur */
+
 
 .form__btn{
     color: #FFFFFF;
@@ -135,21 +148,231 @@ form{
 }
 
 @media screen and (max-width: 767px) {
+    .p__field{
+    width: 100%;
+    }
     #textsearch{
         display: none;
     }
     .form__btn{
         width: 2.9rem;
-        height: 2.9rem;
+        height: 2.86rem;
         border-radius: 1rem;
         border: 1px solid #0065FC;
+        margin-top: -1px;
         
     }
     .p__btn{
         border: 1px solid #F2F2F2;
         border-left: none;
         border-right: none;
-        border-radius: 0 0.8rem 0.8rem 0;
-        margin: 0;
+        border-radius: 0 1rem 1rem 0;
+        height: 2.77rem;
     }
+}
+
+/* Recherche - Filtres */
+
+.filtres{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+
+/*.filtres h4{
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+/* }* */
+
+.filtres ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    list-style-type: none;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.filtre-ico{
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    margin: 0 0.7rem 0 -0.1rem;
+    background-color: #deebff;
+    border: 4px solid #deebff;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    color: #0065FC;
+}
+
+.filtres li{
+    height: 1rem;
+    padding: 0.6rem 0.8rem 0.6rem 0;
+    margin: 0 1.5rem 1rem 0;
+    border: 2px solid #d9d9d9;
+    border-left: none;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.filtres li:hover{
+    color: #FFFFFF;
+    background-color: #0065FC;
+    border-color: #0065FC;
+}
+
+@media screen and (max-width: 767px) {
+    .filtres{
+         flex-direction: column ;
+         justify-content: flex-start;
+         align-items: baseline;
+     }
+ 
+     .filtres h4{
+         margin-bottom: 0;
+     }
+ }
+
+/* Nombre de résultats obtenus */
+
+.nb-resultats data{
+    display: block;
+    padding-top: 0.4rem;
+}
+
+.fa-info{
+    padding: 0.4rem 0.3rem 0.4rem 0.3rem;
+    margin-right: 0.5rem;
+    margin-top: 0rem;
+    float: left;
+    border: 1px solid #F2F2F2;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    color: #0065FC;
+}
+
+/*Résultats de la recherche */
+
+.resultats{
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: flex-start;
+    /*border: 1px solid black;*/
+}
+
+#hebergements{
+    order: 2;
+}
+
+#hebergements h2, .populaires__head{
+    margin-top: 2.5rem;
+}
+
+
+/* Les plus populaires */
+
+.populaires{
+    order: 1;
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
+    padding-bottom: 2rem;
+}
+
+.populaires__head, .populaires__conteneur{
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+
+.populaires__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*border: 1px solid black;*/
+    margin-bottom: 1.25rem;
+}
+
+.populaires h2, .populaires__head .fas{
+    /*border: 1px solid black;*/
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* Mise en forme d'une carte par défaut */
+
+.carte{
+    display: block;
+    height: auto;
+    border: 1px solid #F2F2F2;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.7rem 0.5rem #F2F2F2;
+    padding: 0.3rem;
+    background-color: #FFFFFF;
+    margin-bottom: 0.5rem;
+}
+
+.image{
+    width: 100%;
+    height: 7rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.carte__infos{
+    margin-left: 1rem;
+    font-size: 0.7rem;
+}
+
+.carte__infos h3{
+    font-size: 0.75rem;
+}
+
+.carte__infos h3,.carte__infos p{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.carte-prix, .carte-devise{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.star--blue{
+    color: #0065FC;
+}
+
+.star--gray{
+    color: #F2F2F2;
+}
+
+/* Mise en forme d'une carte pour hébergement populaire */
+
+.carte--populaire{
+    display: flex;
+}
+
+.carte--populaire .image{
+    border-radius: 0.8rem 0 0 0.8rem;
+    width: 6.5rem;  
+    height: 6.5rem;
+}
+
+.carte--populaire .carte__infos{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+.carte--populaire h3, .carte--populaire .tarif, .carte--populaire .etoiles{
+    margin: 0;
+}
+
+.carte--populaire h3{
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.carte--populaire .tarif{
+    flex: 1;
+}
+
+.carte--populaire .etoiles{
+    padding-bottom: 0.5rem;
 }

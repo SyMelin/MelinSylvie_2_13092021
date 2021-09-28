@@ -7,6 +7,7 @@ body{
     font-size: 0.8rem;
     padding-left: 3rem;
     padding-right: 3rem;
+    margin: auto;
 }
 
 .populaires, footer{
@@ -30,7 +31,7 @@ ul{
 /* En-tête */
 
 header{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 .header__top{
@@ -47,8 +48,10 @@ header{
     padding-top: 2.5rem;
 }
 #logo img{
-    width: 6rem;
+    /*width: 6rem;
     height: auto; /* garde le ration lors du redimensionnement de l'image */
+    height: 2rem;
+    width: auto;
 }
 
 nav{
@@ -97,4 +100,139 @@ nav a:hover{
     padding-left: 1.5rem;
 }
 
-/* Recherche */
+/* Recherche - Formulaire */
+
+form{
+    display: flex;
+    align-items: center;
+   /* height: 2.5rem;*/
+}
+
+.form__field, .form__btn{
+    height: 2.9rem;
+}
+
+.form .fa{
+    font-size: 1.125rem;
+    }
+
+.form__ico{
+    width: 3.2rem;
+    height: 2rem;
+    border-radius: 1rem 0 0 1rem;
+    background-color: #F2F2F2;
+    text-align: center;
+    padding-top: 0.92rem;
+}
+
+.form__field{
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding-left: 1.1rem;
+    border: 1px solid #F2F2F2;
+    border-right: none;
+    width: 100%;
+}
+
+.form__field:focus{
+    outline: 1px solid #0065FC;
+}
+/* Attention : Removing outlines in CSS creates issues for people navigating the web with a keyboard. */
+/* Il faut le remplacer par un autre indicateur */
+
+.form__btn{
+    color: #FFFFFF;
+    background-color: #0065FC;
+}
+
+@media screen and (min-width: 768px){
+    #icosearch{
+        display: none;
+    }
+    .p__field{
+        width: 14.5rem;
+    }
+    .form__btn{
+        width: 8rem;
+        font-weight: bold;
+        border-radius: 0 1rem 1rem 0;
+        border: 1px solid #0065FC;
+    }
+}
+
+
+/* Recherche - Filtres */
+
+
+.filtres{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+@media screen and (min-width: 768px){
+    .filtres h4{
+        margin-right: 2rem;
+    }
+}
+
+.filtres ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    list-style-type: none;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.filtre-ico{
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    margin: 0 0.7rem 0 -0.1rem;
+    background-color: #deebff;
+    border: 4px solid #deebff;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    color: #0065FC;
+}
+
+.filtres li{
+    height: 1rem;
+    padding: 0.6rem 0.8rem 0.6rem 0;
+    margin: 0 1.5rem 1rem 0;
+    border: 2px solid #d9d9d9;
+    border-left: none;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.filtres li:hover{
+    color: #FFFFFF;
+    background-color: #0065FC;
+    border-color: #0065FC;
+}
+
+/* Nombre de résultats obtenus */
+
+.nb-resultats data{
+    display: block;
+    padding-top: 0.4rem;
+}
+
+.fa-info{
+    padding: 0.4rem 0.3rem 0.4rem 0.3rem;
+    margin-right: 0.5rem;
+    margin-top: 0rem;
+    float: left;
+    border: 1px solid #F2F2F2;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    color: #0065FC;
+}
+
+
+/*Résultats de la recherche */
+
+.resultats{
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: flex-start;
+    border: 1px solid black;
+}
+

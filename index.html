@@ -4,6 +4,7 @@
         <!-- Information générale -->
         <title>Reservia</title>
         <!-- <meta viewport> -->
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
         <meta charset="utf-8" />
         <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve" /> <!-- Description du site qui apparait en dessous du titre de la page lors d'une recherche sur moteur de recherche -->
         
@@ -30,24 +31,28 @@
     </head>
     <body>
 
+        <!-- Conteneur global -->
         <div class="container">
             
 
-        <!--En-tête -->
+            <!--En-tête -->
             <header>
+
+                <!-- Partie haute de l'en-tête -->
                 <div class="header__top">
                     <div id="logo">
                         <img src="images/logo/reservia.svg" alt="logo de Reservia" />
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="#hebergements" class="nav__link">Hébergements</a></li>
-                            <li><a href="#activites" class="nav__link">Activités</a></li>
+                            <li><a href="#hebergements">Hébergements</a></li>
+                            <li><a href="#activites">Activités</a></li>
                         </ul>
                     </nav>
-                    <!-- attention, mettre la bonne balise pour s'inscrire -->
                     <p id="inscription"><a href="#">S'inscrire</a></p>
                 </div>
+
+                <!-- Partie basse de l'en-tête avec le slogan -->
                 <div class="slogan">
                     <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                     <p>En plein centre ville ou en pleine nature</p>
@@ -57,6 +62,7 @@
             <!-- Recherche -->
             <section class="recherche">
                 
+                <!-- Formulaire -->
                 <form method="post" action="#.php" >
                     
                     <!-- icône localisation -->
@@ -66,7 +72,7 @@
                     
                     <!-- Champs de saisie du nom de la ville -->
                     <p class="p__field">
-                        <input type="search" name="ville" class="form__field" placeholder="Ville" /> 
+                        <input type="search" name="ville" class="form__field" placeholder="Ville, Pays" /> 
                     </p>
                     
                     <!-- Bouton non fonctionnel de recherche -->
@@ -76,7 +82,7 @@
 
                 </form>
                 
-                
+                <!-- Filtres non fonctionnels -->
                 <div class="filtres">
                     <h4>Filtres</h4>
                     <ul class="fa-ul">
@@ -87,88 +93,97 @@
                     </ul>
                 </div>
                 
-                <p class="resultats-info"><i class="fas fa-info fa-sm fa-fw"></i><data value="500">Plus de 500 logements sont disponibles dans cette ville</data></p> <!--s génériques à afficher, comme le nombre de client convertis par votre logiciel ou le nombre d’inscrits à votre newsletter. -->
+                <!-- Nombre de résultats obtenus -->
+                <p class="nb-resultats"><i class="fas fa-info fa-sm fa-fw"></i><data value="500">Plus de 500 logements sont disponibles dans cette ville</data></p> <!--s génériques à afficher, comme le nombre de client convertis par votre logiciel ou le nombre d’inscrits à votre newsletter. -->
 
             </section>
             
             <!-- Résultats de la recherche -->
-            
             <section class="resultats">
                 
                 <!-- Hébergements -->
                 <div id="hebergements">
+
                     <h2>Hébergements à Marseille</h2>
-                        <div class="hebergement__conteneur">
-                            <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
-                                <div class="carte__img">
-                                    <img class="image" src="images/hebergements/auberge_la_cannebiere.png" alt="Visitez le site de Auberge La Cannebière" />
-                                </div>
-                                <div class="carte__infos">
-                                    <h3>Auberge la Cannebière</h3>
-                                    <p>Nuit à partir de <em class="carte-prix">25</em><em class="carte-devise">€</em></p>
-                                    <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--gray"></i></p>
-                                </div>
-                            </a>
-                            <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
-                                <div class="carte__img">
-                                    <img class="image" src="images/hebergements/hotel_du_port.png" alt="Visitez le site de Hôtel du port" />
-                                </div>
-                                <div class="carte__infos">
-                                    <h3>Hôtel du port</h3>
-                                    <p>Nuit à partir de 52<em class="carte-devise">€</em></p>
-                                    <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i></p>
-                                </div>
-                            </a>
-                            <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
-                                <div class="carte__img">
-                                    <img class="image" src="images/hebergements/hotel_les_mouettes.png" alt="Visitez le site de Hôtel les mouettes" />
-                                </div>
-                                <div class="carte__infos">
-                                    <h3>Hôtel les mouettes</h3>
-                                    <p>Nuit à partir de 76<em class="carte-devise">€</em></p>
-                                    <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--gray"></i></p>
-                                </div>
-                            </a>
-                            <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
-                                <div class="carte__img">
-                                    <img class="image" src="images/hebergements/hotel_de_la_mer.png" alt="Visitez le site de Hôtel de la mer" />
-                                </div>
-                                <div class="carte__infos">
-                                    <h3>Hôtel de la mer</h3>
-                                    <p>Nuit à partir de 46<em class="carte-devise">€</em></p>
-                                    <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--gray"></i><i class="fas fa-star star--gray"></i></p>
-                                </div>
-                            </a>
-                            <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
-                                <div class="carte__img">
-                                    <img class="image" src="images/hebergements/auberge_le_panier.png" alt="Visitez le site de Auberge Le Panier" />
-                                </div>
-                                <div class="carte__infos">
-                                    <h3>Auberge Le Panier</h3>
-                                    <p>Nuit à partir de <em class="carte-prix">23</em><em class="carte-devise">€</em></p>
-                                    <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--gray"></i></p>
-                                </div>
-                            </a>
-                            <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
-                                <div class="carte__img">
-                                    <img class="image" src="images/hebergements/hotel_chez_amina.png" alt="Visitez le site de Hôtel chez Amina" />
-                                </div>
-                                <div class="carte__infos">
-                                    <h3>Hôtel chez Amina</h3>
-                                    <p>Nuit à partir de 96<em class="carte-devise">€</em></p>
-                                    <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i></p>
-                                </div>
-                            </a>                        
-                        </div>    
+
+                    <!-- Conteneur regroupant toutes les cartes d'hébergements trouvées -->
+                    <div class="hebergements__conteneur">
+                        <a class="carte" href="#">
+                            <div class="carte__img">
+                                <img class="image" src="images/hebergements/auberge_la_cannebiere.png" alt="Visitez le site de Auberge La Cannebière" />
+                            </div>
+                            <div class="carte__infos">
+                                <h3>Auberge la Cannebière</h3>
+                                <p>Nuit à partir de <em class="carte-prix">25</em><em class="carte-devise">€</em></p>
+                                <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--gray"></i></p>
+                            </div>
+                        </a>
+                        <a class="carte" href="#">
+                            <div class="carte__img">
+                                <img class="image" src="images/hebergements/hotel_du_port.png" alt="Visitez le site de Hôtel du port" />
+                            </div>
+                            <div class="carte__infos">
+                                <h3>Hôtel du port</h3>
+                                <p>Nuit à partir de 52<em class="carte-devise">€</em></p>
+                                <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i></p>
+                            </div>
+                        </a>
+                        <a class="carte" href="#">
+                            <div class="carte__img">
+                                <img class="image" src="images/hebergements/hotel_les_mouettes.png" alt="Visitez le site de Hôtel les mouettes" />
+                            </div>
+                            <div class="carte__infos">
+                                <h3>Hôtel les mouettes</h3>
+                                <p>Nuit à partir de 76<em class="carte-devise">€</em></p>
+                                <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--gray"></i></p>
+                            </div>
+                        </a>
+                        <a class="carte" href="#">
+                            <div class="carte__img">
+                                <img class="image" src="images/hebergements/hotel_de_la_mer.png" alt="Visitez le site de Hôtel de la mer" />
+                            </div>
+                            <div class="carte__infos">
+                                <h3>Hôtel de la mer</h3>
+                                <p>Nuit à partir de 46<em class="carte-devise">€</em></p>
+                                <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--gray"></i><i class="fas fa-star star--gray"></i></p>
+                            </div>
+                        </a>
+                        <a class="carte" href="#">
+                            <div class="carte__img">
+                                <img class="image" src="images/hebergements/auberge_le_panier.png" alt="Visitez le site de Auberge Le Panier" />
+                            </div>
+                            <div class="carte__infos">
+                                <h3>Auberge Le Panier</h3>
+                                <p>Nuit à partir de <em class="carte-prix">23</em><em class="carte-devise">€</em></p>
+                                <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--gray"></i></p>
+                            </div>
+                        </a>
+                        <a class="carte" href="#">
+                            <div class="carte__img">
+                                <img class="image" src="images/hebergements/hotel_chez_amina.png" alt="Visitez le site de Hôtel chez Amina" />
+                            </div>
+                            <div class="carte__infos">
+                                <h3>Hôtel chez Amina</h3>
+                                <p>Nuit à partir de 96<em class="carte-devise">€</em></p>
+                                <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i></p>
+                            </div>
+                        </a>                        
+                    </div>    
+
                     <p class="plus">Afficher plus</p>
                 </div>
+
+                <!-- Les hébergements les plus populaires -->
                 <aside class="populaires">
+
                     <div class="populaires__head">
                         <h2>Les plus populaires</h2>
                         <i class="fas fa-chart-line fa-lg fa-fw"></i>
                     </div>
+
+                    <!-- Conteneur regroupant les hébergements les plus populaires de la ville ciblée -->
                     <div class="populaires__conteneur">
-                        <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                        <a class="carte carte--populaire" href="#">
                             <div class="carte__img">
                                 <img class="image" src="images/hebergements/hotel_le_soleil_du_matin.jpg" alt="Visitez le site de Hôtel Le soleil du matin" />
                             </div>
@@ -178,23 +193,23 @@
                                 <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i></p>
                             </div>
                         </a>
-                        <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                        <a class="carte carte--populaire" href="#">
                             <div class="carte__img">
                                 <img class="image" src="images/hebergements/au_coeur_de_l_eau_chambres_d_hotes.jpg" alt="Visitez le site de Au coeur de l'eau Chambres d'hôtes" />
                             </div>
                             <div class="carte__infos">
                                 <h3>Au coeur de l'eau<br />Chambres d'hôtes</h3>
-                                <p>Nuit à partir de 71<em class="carte-devise">€</em></p>
+                                <p class="tarif">Nuit à partir de 71<em class="carte-devise">€</em></p>
                                 <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--gray"></i></p>
                             </div>
                         </a>
-                        <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                        <a class="carte--populaire carte" href="#">
                             <div class="carte__img">
                                 <img class="image" src="images/hebergements/hotel_tout_bleu_et_blanc.jpg" alt="Visitez le site de Hôtel Tout bleu et Blanc" />
                             </div>
                             <div class="carte__infos">
                                 <h3>Hôtel Tout bleu et Blanc</h3>
-                                <p>Nuit à partir de 68<em class="carte-devise">€</em></p>
+                                <p class="tarif">Nuit à partir de 68<em class="carte-devise">€</em></p>
                                 <p class="etoiles"><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--blue"></i><i class="fas fa-star star--gray"></i></p>
                             </div>
                         </a>
@@ -207,7 +222,7 @@
                 <h2>Activités à Marseille</h2>
                 <div class="activites__conteneur">
                     <div class="cadre" id="one">
-                        <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                        <a class="carte" href="#"> 
                             <div class="carte__img">
                                 <img class="image" src="images/activites/vieux_port.jpg" alt="Visitez le site du Vieux Port" />
                             </div>
@@ -215,7 +230,7 @@
                         </a>
                     </div>
                     <div class="cadre" id="two">
-                        <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                        <a class="carte" href="#">
                             <div class="carte__img">
                                 <img class="image" src="images/activites/fort_de_pomegues.jpg" alt="Visitez le site de Fort de Pomègues" />
                             </div>
@@ -223,7 +238,7 @@
                         </a>
                     </div>
                     <div class="cadre" id="three">
-                        <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                        <a class="carte" href="#">
                             <div class="carte__img">
                                 <img class="image" src="images/activites/iles_du_frioul.jpg" alt="Visitez le site de Îles du Frioul" />
                             </div>
@@ -231,7 +246,7 @@
                         </a>
                     </div>
                     <div class="cadre" id="four">
-                        <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                        <a class="carte" href="#">
                             <div class="carte__img">
                                 <img class="image" src="images/activites/parc_national_des_calanques.jpg" alt="Visitez le site du Parc National des Calanques" />
                             </div>
@@ -239,7 +254,7 @@
                         </a>
                     </div>
                     <div class="cadre" id="five">
-                        <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                        <a class="carte" href="#"> 
                             <div class="carte__img">
                                 <img class="image" src="images/activites/notre_dame_de_la_garde.jpg" alt="Visitez le site de Notre-Dame-de-la-Garde" />
                             </div>
@@ -247,7 +262,7 @@
                         </a>
                     </div>
                     <div class="cadre" id="six">
-                        <a class="carte" href="https://www.google.fr"> <!-- Pour voir si ça fonctionne. A supprimer -->
+                        <a class="carte" href="#">
                             <div class="carte__img">
                                 <img class="image" src="images/activites/parc_longchamp.jpg" alt="Visitez le site du Parc Longchamp" />
                             </div>
@@ -283,7 +298,6 @@
                 </div>
             </footer>
         
-
-        </div>
+        </div><!-- Fermeture du conteneur global -->
     </body>
 </html>
