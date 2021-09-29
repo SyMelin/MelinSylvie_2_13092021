@@ -256,7 +256,7 @@ form{
 .resultats{
     display: flex;
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 992px){
     #hebergements{
         order: 1;
         flex: 1;
@@ -284,7 +284,7 @@ form{
     margin-bottom: 0;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 992px){
     /* Hébergements trouvés */
     .hebergements__conteneur{
         display: flex;
@@ -301,7 +301,7 @@ form{
     font-weight: bold;
     margin: 0.25rem;
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 992px){
     .plus{
         margin: 0.25rem;
     }
@@ -327,7 +327,7 @@ form{
     object-position: center;
     border-radius: 0.8rem 0.8rem 0 0;
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 992px){
     .image{
         height: 7.125rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
     }
@@ -369,7 +369,7 @@ form{
 .carte--populaire .image{
     border-radius: 0.8rem 0 0 0.8rem;
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 992px){
     .carte--populaire .image{
         width: 7.9rem;  
         height: 8.3rem;
@@ -383,7 +383,7 @@ form{
     max-width: 8.3rem;
     margin: 0.5rem;
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 992px){
     .carte--populaire .carte__infos{
         margin-left: 1.25rem;
     }
@@ -406,7 +406,7 @@ form{
     padding-bottom: 0.2rem;
 }
 
-@media (min-width: 767px) and (max-width: 1024px){
+@media screen and (min-width: 768px) and (max-width: 992px){
     .resultats{
             flex-flow: wrap column;
             justify-content: flex-start;
@@ -447,6 +447,62 @@ form{
         margin: 0.5rem;
     }
 }
+
+/*Mise en forme d'une carte d'activité */
+
+.carte--activite{
+    padding: 0;
+    margin-top: 1.25rem;
+}
+
+.carte--activite h3{
+    font-size: 0.8rem;
+    padding-left: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Activités */
+
+
+@media screen and (min-width: 768px) {
+    .activites__conteneur .carte--activite{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100.5%;
+        height: 100;
+        margin: 0;
+    }
+
+    .carte--activite .image{
+        flex: 1;
+    }
+
+    .activites__conteneur{
+        display: grid;
+        grid-template: repeat(10, 1.5em) / repeat(4, 1fr);
+        grid-gap: 1.5rem;
+    }
+    #one{
+        grid-row: 1 / 11;
+    }
+    #two{
+        grid-row: 1 / 7;
+    }
+    #three{
+        grid-row: 7 / 11;
+    }
+    #four{
+        grid-row: 1 / 11;
+    }
+    #five{
+        grid-row: 1 / 6;
+    }
+    #six{
+        grid-row: 6 / 11;
+    }
+}
+
 
 
 
