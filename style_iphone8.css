@@ -4,7 +4,7 @@ body{
 .container{
     font-family: 'Raleway', sans-serif;
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .container{
         font-size: 0.75rem;
         padding-left: 1.2rem;
@@ -21,7 +21,7 @@ body{
 h1, h2{
     font-weight: bold;
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     h1, h2{
         font-size: 1rem;
     }
@@ -52,7 +52,7 @@ ul{
 #logo{
     order: 1;
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     #logo{
         min-width: 65%;
     }
@@ -63,7 +63,7 @@ ul{
     width: auto; /* garde le ration lors du redimensionnement de l'image */
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     nav{
         order: 3;
         flex: 3;
@@ -76,7 +76,7 @@ nav ul{
     padding-left: 0%;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     nav li{
         width: 50%;
         text-align: center;
@@ -87,7 +87,7 @@ nav a{
     display: block;
     border-top: 0.2rem solid #FFFFFF;
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     nav a{
         border-bottom: 0.2rem solid #f2f2f2;
         padding-bottom: 0.8rem;
@@ -102,7 +102,7 @@ nav a:hover{
 #inscription{
     margin-left: 1.2rem;
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     #inscription{
         order: 2;
         width: 25%;
@@ -164,7 +164,7 @@ font-size: 1.125rem;
     border: 1px solid #0065FC;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .p__field{
     width: 100%;
     }
@@ -228,7 +228,7 @@ font-size: 1.125rem;
     border-color: #0065FC;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .filtres{
          flex-direction: column ;
          justify-content: flex-start;
@@ -262,7 +262,7 @@ font-size: 1.125rem;
 .resultats{
     display: flex;
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .resultats{
         flex-flow: wrap column;
         justify-content: flex-start;
@@ -287,7 +287,7 @@ font-size: 1.125rem;
     justify-content: space-between;
     align-items: center;
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .populaires__head{
         margin-bottom: 1.25rem;
     }
@@ -302,7 +302,7 @@ font-size: 1.125rem;
     font-weight: bold;
     margin-top: 1.5rem;
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .plus{
         margin-top: 1.5rem;
     }
@@ -328,7 +328,7 @@ font-size: 1.125rem;
     object-position: center;
     border-radius: 0.8rem 0.8rem 0 0;
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .image{
         height: 7rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
     }
@@ -370,7 +370,7 @@ font-size: 1.125rem;
 .carte--populaire .image{
     border-radius: 0.8rem 0 0 0.8rem;
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .carte--populaire .image{
         width: 6.5rem;  
         height: 6.5rem;
@@ -451,7 +451,7 @@ footer li{
     margin-bottom: 0.8rem;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     footer{
         display: flex;
         flex-direction: column;
