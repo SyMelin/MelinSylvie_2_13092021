@@ -1,13 +1,17 @@
 body{
     background-color: #FFFFFF;
-    border: 1px solid black;
 }
 .container{
     font-family: 'Raleway', sans-serif;
-    font-size: 0.8rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    margin: auto;
+}
+@media screen and (min-width: 992px){
+    .container{
+        font-size: 0.8rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin: auto;
+        max-width: 1199px; /*ATTENTION*/
+    }
 }
 
 .populaires, footer{
@@ -16,7 +20,15 @@ body{
 
 h1, h2{
     font-weight: bold;
-    font-size: 1.1rem;
+}
+@media screen and (min-width: 768px){
+    h1, h2{
+        font-size: 1.1rem;
+    }
+    #hebergements h2, .populaires__head, #activites h2{
+        margin-top: 0.25rem;
+        margin-bottom: 1.375rem;
+    }
 }
 
 a{
@@ -30,74 +42,90 @@ ul{
 
 /* En-tête */
 
-header{
-    /*border: 1px solid black;*/
-}
-
 .header__top{
-    /*border: 1px solid black;*/
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
 }
 
 #logo{
     order: 1;
-    flex: 1;
-    border: 1px solid black;
-    padding-top: 2.5rem;
 }
-#logo img{
-    /*width: 6rem;
-    height: auto; /* garde le ration lors du redimensionnement de l'image */
-    height: 2rem;
-    width: auto;
+@media screen and (min-width: 768px){
+    #logo{
+        order: 1;
+        flex: 1;
+        padding-top: 2rem;
+    }
 }
 
-nav{
-    order: 2;
-    border: 1px solid black;
-    margin: 0 -1.2rem 0 -1.2rem;
+#logo img{
+    height: 2rem;
+    width: auto; /* garde le ration lors du redimensionnement de l'image */
+}
+
+@media screen and (min-width: 768px){
+    nav{
+        order: 2;
+        margin: 0 -1.2rem 0 -1.2rem;
+    }
 }
 
 nav ul{
     display: flex;
-    justify-content: space-around;
     padding-left: 0;
-    border: 1px solid black;
 }
-
-nav li{
-    /*border: 1px solid black;*/
-    /*text-align: center;*/
+@media screen and (min-width: 768px){
+    nav ul{
+        justify-content: space-around;
+        margin-top: 0;
+    }
 }
 
 nav a{
     display: block;
     border-top: 0.2rem solid #FFFFFF;
-    border-bottom: 0.2rem solid #FFFFFF;
-    padding-top: 3rem;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-    margin-right: 1.1rem;
 }
+@media screen and (min-width: 768px){
+    nav a{
+        border-bottom: 0.2rem solid #FFFFFF;
+        padding-top: 3rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        margin-right: 1.1rem;
+    }
+}
+
 nav a:hover{
     color: #0065FC;
     border-top: 0.2rem solid #0065FC;
 }
 
 #inscription{
-    order: 3;
-    text-align: right;
-    padding-top: 3rem;
-    /*border: 1px solid black;*/
     margin-left: 1.2rem;
-   }
+    margin-top: 0;
+}
+@media screen and (min-width: 768px){
+    #inscription{
+        order: 3;
+        text-align: right;
+        padding-top: 3rem;
+    }
+}
+
 #inscription a{
     color: #0065FC;
     font-weight: bold;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+}
+@media screen and (min-width: 768px){
+    #inscription a{
+        color: #0065FC;
+        font-weight: bold;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
 }
 
 /* Recherche - Formulaire */
@@ -105,7 +133,6 @@ nav a:hover{
 form{
     display: flex;
     align-items: center;
-   /* height: 2.5rem;*/
 }
 
 .form__field, .form__btn{
@@ -143,26 +170,24 @@ form{
 .form__btn{
     color: #FFFFFF;
     background-color: #0065FC;
+    border: 1px solid #0065FC;
 }
 
 @media screen and (min-width: 768px){
-    #icosearch{
-        display: none;
-    }
     .p__field{
         width: 14.5rem;
+    }
+    #icosearch{
+        display: none;
     }
     .form__btn{
         width: 8rem;
         font-weight: bold;
         border-radius: 0 1rem 1rem 0;
-        border: 1px solid #0065FC;
     }
 }
 
-
 /* Recherche - Filtres */
-
 
 .filtres{
     display: flex;
@@ -226,13 +251,242 @@ form{
     color: #0065FC;
 }
 
-
 /*Résultats de la recherche */
 
 .resultats{
     display: flex;
-    flex-flow: wrap column;
-    justify-content: flex-start;
-    border: 1px solid black;
+}
+@media screen and (min-width: 1025px){
+    .resultats{
+        justify-content: space-between;
+    }
+    #hebergements{
+        order: 1;
+        width: 56%;
+        padding: 2.5rem;
+        border-radius: 1.5rem;
+        background-color: #F2F2F2;
+    }
+    .populaires{
+        order: 2;
+        width: 28%;
+        padding: 2.5rem 2.25rem 2.5rem 2.25rem;
+        border-radius: 1.5rem;
+    }
 }
 
+.populaires__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires h2, .populaires__head .fas{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 1025px){
+    /* Hébergements trouvés */
+    .hebergements__conteneur{
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-around;
+    }
+    .hebergements__conteneur .carte{
+        width: 30%;
+    }
+}
+
+.plus{
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin: 0.25rem;
+}
+@media screen and (min-width: 1025px){
+    .plus{
+        margin: 0.25rem;
+    }
+}
+
+/* Mise en forme d'une carte par défaut */
+
+.carte{
+    display: block;
+    height: auto;
+    border: 1px solid #F2F2F2;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #F2F2F2;
+    padding: 0.3rem;
+    background-color: #FFFFFF;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.image{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.8rem 0.8rem 0 0;
+}
+@media screen and (min-width: 1025px){
+    .image{
+        height: 7.125rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
+    }
+}
+
+.carte__infos{
+    margin-left: 1rem;
+    font-size: 0.7rem;
+}
+
+.carte__infos h3{
+    font-size: 0.75rem;
+}
+
+.carte__infos h3,.carte__infos p{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.carte-prix, .carte-devise{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.star--blue{
+    color: #0065FC;
+}
+
+.star--gray{
+    color: #F2F2F2;
+}
+
+/* Mise en forme d'une carte pour hébergement populaire */
+
+.carte--populaire{
+    display: flex;
+}
+
+.carte--populaire .image{
+    border-radius: 0.8rem 0 0 0.8rem;
+}
+@media screen and (min-width: 1025px){
+    .carte--populaire .image{
+        width: 7.9rem;  
+        height: 8.3rem;
+    }
+}
+
+.carte--populaire .carte__infos{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    max-width: 8.3rem;
+    margin: 0.5rem;
+}
+@media screen and (min-width: 1025px){
+    .carte--populaire .carte__infos{
+        margin-left: 1.25rem;
+    }
+}
+
+.carte--populaire h3, .carte--populaire .tarif, .carte--populaire .etoiles{
+    margin: 0;
+}
+
+.carte--populaire h3{
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+.carte--populaire .tarif{
+    flex: 1;
+}
+
+.carte--populaire .etoiles{
+    padding-bottom: 0.2rem;
+}
+
+@media (min-width: 767px) and (max-width: 1024px){
+    .resultats{
+            flex-flow: wrap column;
+            justify-content: flex-start;
+    }
+    #hebergements{
+        order: 2;
+    }
+    .hebergements__conteneur{
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-around;
+    }
+    .hebergements__conteneur .carte{
+        width: 30%;
+    }
+    .image{
+        height: 7rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
+    }
+    .populaires{
+        order: 1;
+        padding: 1rem;
+        border-radius: 1.5rem;
+    }
+    .populaires__conteneur{
+        display: flex;
+        justify-content: space-between;
+    }
+    .carte--populaire{
+        width: 30%;
+    }
+    .carte--populaire .image{
+        width: 6rem;  
+        height: 7rem;
+    }
+    .carte--populaire .carte__infos{
+        margin-left: 1rem;
+        max-width: 10rem;
+        margin: 0.5rem;
+    }
+}
+
+
+
+
+
+
+/* Pied-de-page */
+
+footer{
+    padding-top: 3rem;
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
+    /*padding: 1.5rem 1.5rem 0 1.5rem;*/
+    display: flex;
+}
+
+footer h3{
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+footer div{
+    min-width: 33%;
+    margin: 0 1.875rem 1.875rem 1.875rem;
+}
+
+footer ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+footer li{
+    margin-bottom: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+    footer{
+        display: flex;
+    }
+}
