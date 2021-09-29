@@ -3,11 +3,15 @@ body{
 }
 .container{
     font-family: 'Raleway', sans-serif;
-    font-size: 0.75rem;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
+}
+@media screen and (max-width: 767px){
+    .container{
+        font-size: 0.75rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+    }
 }
 
 .populaires, footer{
@@ -16,11 +20,14 @@ body{
 
 h1, h2{
     font-weight: bold;
-    font-size: 1rem;
 }
-
-#hebergements h2, .populaires__head, #activites h2{
-    margin-top: 2.5rem;
+@media screen and (max-width: 767px){
+    h1, h2{
+        font-size: 1rem;
+    }
+    #hebergements h2, .populaires__head, #activites h2{
+         margin-top: 2.5rem;
+    }
 }
 
 a{
@@ -34,67 +41,74 @@ ul{
 
 /* En-tête */
 
-header{
-   /*border: 1px solid black;*/
-}
-
 .header__top{
-    /*border: 1px solid black;*/
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
 }
 
 #logo{
     order: 1;
-    min-width: 65%;
 }
-#logo img{
-   /* width: 5.875rem;
-    height: auto; /* garde le ration lors du redimensionnement de l'image */
-    height: 2rem;
-    width: auto;
+@media screen and (max-width: 767px){
+    #logo{
+        min-width: 65%;
+    }
 }
 
-nav{
-    order: 3;
-    flex: 3;
-    /*border: 1px solid black;*/
-    margin: auto -1.2rem auto -1.2rem;
+#logo img{
+    height: 2rem;
+    width: auto; /* garde le ration lors du redimensionnement de l'image */
+}
+
+@media screen and (max-width: 767px){
+    nav{
+        order: 3;
+        flex: 3;
+        margin: auto -1.2rem auto -1.2rem;
+    }
 }
 
 nav ul{
     display: flex;
     padding-left: 0%;
-    /*border: 1px solid black;*/
 }
 
-nav li{
-    width: 50%;
-    /*border: 1px solid black;*/
-    text-align: center;
-
+@media screen and (max-width: 767px){
+    nav li{
+        width: 50%;
+        text-align: center;
+    }
 }
 
 nav a{
     display: block;
     border-top: 0.2rem solid #FFFFFF;
-    border-bottom: 0.2rem solid #f2f2f2;
-    padding-bottom: 0.8rem;
 }
+@media screen and (max-width: 767px){
+    nav a{
+        border-bottom: 0.2rem solid #f2f2f2;
+        padding-bottom: 0.8rem;
+    }
+}
+
 nav a:hover{
     color: #0065FC;
     border-bottom: 0.2rem solid #0065FC;
 }
 
 #inscription{
-    order: 2;
-    width: 25%;
-    font-size: 0.8rem;
-    text-align: right;
-    /*border: 1px solid black;*/
     margin-left: 1.2rem;
-
+}
+@media screen and (max-width: 767px){
+    #inscription{
+        order: 2;
+        width: 25%;
+        font-size: 0.8rem;
+        text-align: right;
+    }
 }
 
 #inscription a{
@@ -107,7 +121,6 @@ nav a:hover{
 form{
     display: flex;
     align-items: center;
-   /* height: 2.5rem;*/
 }
 
 .form__field, .form__btn{
@@ -145,10 +158,10 @@ font-size: 1.125rem;
 /* Attention : Removing outlines in CSS creates issues for people navigating the web with a keyboard. */
 /* Il faut le remplacer par un autre indicateur */
 
-
 .form__btn{
     color: #FFFFFF;
     background-color: #0065FC;
+    border: 1px solid #0065FC;
 }
 
 @media screen and (max-width: 767px) {
@@ -162,7 +175,6 @@ font-size: 1.125rem;
         width: 2.9rem;
         height: 2.86rem;
         border-radius: 1rem;
-        border: 1px solid #0065FC;
         margin-top: -1px;
         
     }
@@ -182,12 +194,6 @@ font-size: 1.125rem;
     justify-content: flex-start;
     align-items: baseline;
 }
-
-
-/*.filtres h4{
-    margin-bottom: 1rem;
-    margin-right: 2rem;
-/* }* */
 
 .filtres ul {
     display: flex;
@@ -255,53 +261,52 @@ font-size: 1.125rem;
 
 .resultats{
     display: flex;
-    flex-flow: wrap column;
-    justify-content: flex-start;
-    /*border: 1px solid black;*/
 }
-
-#hebergements{
-    order: 2;
-}
-
-
-/* Hébergements trouvés */
-
-.plus{
-    font-size: 0.875rem;
-    font-weight: bold;
-    margin-top: 1.5rem;
-}
-
-
-/* Les plus populaires */
-
-.populaires{
-    order: 1;
-    margin-left: -1.2rem;
-    margin-right: -1.2rem;
-    padding-bottom: 2rem;
-}
-
-.populaires__head, .populaires__conteneur{
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
+@media screen and (max-width: 767px){
+    .resultats{
+        flex-flow: wrap column;
+        justify-content: flex-start;
+    }
+    #hebergements{
+        order: 2;
+    }
+    .populaires{
+        order: 1;
+        margin-left: -1.2rem;
+        margin-right: -1.2rem;
+        padding-bottom: 2rem;
+    }
+    .populaires__head, .populaires__conteneur{
+        margin-left: 1.2rem;
+        margin-right: 1.2rem;
+    }
 }
 
 .populaires__head{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*border: 1px solid black;*/
-    margin-bottom: 1.25rem;
 }
-
+@media screen and (max-width: 767px){
+    .populaires__head{
+        margin-bottom: 1.25rem;
+    }
+}
 .populaires h2, .populaires__head .fas{
-    /*border: 1px solid black;*/
     margin-top: 0;
     margin-bottom: 0;
 }
 
+.plus{
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+@media screen and (max-width: 767px){
+    .plus{
+        margin-top: 1.5rem;
+    }
+}
 
 /* Mise en forme d'une carte par défaut */
 
@@ -319,10 +324,14 @@ font-size: 1.125rem;
 
 .image{
     width: 100%;
-    height: 7rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
     object-fit: cover;
     object-position: center;
     border-radius: 0.8rem 0.8rem 0 0;
+}
+@media screen and (max-width: 767px){
+    .image{
+        height: 7rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
+    }
 }
 
 .carte__infos{
@@ -360,8 +369,12 @@ font-size: 1.125rem;
 
 .carte--populaire .image{
     border-radius: 0.8rem 0 0 0.8rem;
-    width: 6.5rem;  
-    height: 6.5rem;
+}
+@media screen and (max-width: 767px){
+    .carte--populaire .image{
+        width: 6.5rem;  
+        height: 6.5rem;
+    }
 }
 
 .carte--populaire .carte__infos{
@@ -384,7 +397,7 @@ font-size: 1.125rem;
 }
 
 .carte--populaire .etoiles{
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
 }
 
 /*Mise en forme d'une carte d'activité */
@@ -438,7 +451,7 @@ footer li{
     margin-bottom: 0.8rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
     footer{
         display: flex;
         flex-direction: column;
