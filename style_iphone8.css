@@ -6,11 +6,11 @@ body{
 }
 @media screen and (max-width: 992px){
     .container{
-        font-size: 0.75rem;
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-        margin-left: -0.5rem;
-        margin-right: -0.5rem;
+        font-size: 0.75rem;/*A verif */
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: -0.5rem; /* Sinon, espace entre bordure container et éléments intérieurs */
+        margin-right: -0.5rem; /* Sinon, espace entre bordure container et éléments intérieurs */
     }
 }
 
@@ -21,12 +21,14 @@ body{
 h1, h2{
     font-weight: bold;
 }
+
+#hebergements h2, .populaires__head, #activites h2{
+    margin: 0;
+}
+
 @media screen and (max-width: 768px){
     h1, h2{
         font-size: 1rem;
-    }
-    #hebergements h2, .populaires__head, #activites h2{
-         margin-top: 2.5rem;
     }
 }
 
@@ -269,16 +271,52 @@ font-size: 1.125rem;
     }
     #hebergements{
         order: 2;
+        border: 1px solid black;
+
     }
     .populaires{
         order: 1;
-        margin-left: -1.2rem;
-        margin-right: -1.2rem;
-        padding-bottom: 2rem;
+        /*margin-left: -1.2rem;
+        margin-right: -1.2rem;*/
+       /* padding-bottom: 2rem;*/
     }
+    /*
     .populaires__head, .populaires__conteneur{
         margin-left: 1.2rem;
         margin-right: 1.2rem;
+    }*/
+    
+}
+
+@media screen and (max-width: 992px){
+    #hebergements, .populaires, #activites{
+            padding-top: 2.625rem;
+            border: 1px solid black;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #hebergements, .populaires, #activites{
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .hebergements__conteneur{
+        margin: 1.25rem 0rem 2.25rem 0rem;
+    }
+    .populaires__conteneur{
+        margin: 1.5rem 0rem 2.25rem 0rem;
+    }
+    .activites__conteneur{
+        margin: 2rem 0 3rem 0;
+    }
+}
+.plus{
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+@media screen and (max-width: 768px){
+    .plus{
+      margin-bottom: 1rem;
     }
 }
 
@@ -288,25 +326,15 @@ font-size: 1.125rem;
     align-items: center;
 }
 @media screen and (max-width: 768px){
-    .populaires__head{
+    /*.populaires__head{
         margin-bottom: 1.25rem;
-    }
+    }*/
 }
 .populaires h2, .populaires__head .fas{
-    margin-top: 0;
-    margin-bottom: 0;
+    margin:0;
 }
 
-.plus{
-    font-size: 0.875rem;
-    font-weight: bold;
-    margin-top: 1.5rem;
-}
-@media screen and (max-width: 768px){
-    .plus{
-        margin-top: 1.5rem;
-    }
-}
+
 
 /* Mise en forme d'une carte par défaut */
 
@@ -318,8 +346,8 @@ font-size: 1.125rem;
     box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #F2F2F2;
     padding: 0.3rem;
     background-color: #FFFFFF;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    /*margin-top: 0.5rem; 
+    margin-bottom: 0.5rem;*/ /*mettre space between??? */
 }
 
 .carte__img{
@@ -417,7 +445,9 @@ font-size: 1.125rem;
 /*  Activités */
 
 #activites{
-    margin-bottom: 3em;
+    border: 1px solid black;
+
+    /*margin-bottom: 3em;*/
 }
 
 

@@ -6,9 +6,9 @@ body{
 }
 @media screen and (min-width: 992px){
     .container{
-        font-size: 0.8rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        font-size: 0.8rem; /*A verif */
+        padding-left: 3.125rem;
+        padding-right: 3.125rem;
         margin: auto;
         max-width: 1199px; /*Largeur d'écran max pour ordinateur moyen*/
     }
@@ -21,13 +21,14 @@ body{
 h1, h2{
     font-weight: bold;
 }
+
+#hebergements h2, .populaires__head, #activites h2{
+    margin: 0;
+}
+
 @media screen and (min-width: 768px){
     h1, h2{
         font-size: 1.1rem;
-    }
-    #hebergements h2, .populaires__head, #activites h2{
-        margin-top: 0.25rem;
-        margin-bottom: 1.375rem;
     }
 }
 
@@ -260,7 +261,7 @@ form{
     #hebergements{
         order: 1;
         flex: 1;
-        padding: 2.5rem;
+       /* padding: 2.5rem;*/
         border-radius: 1.5rem;
         background-color: #F2F2F2;
     }
@@ -268,8 +269,47 @@ form{
         order: 2;
         width: 28%;
         margin-left: 2rem;
-        padding: 2.5rem 2.25rem 2.5rem 2.25rem;
+        /*padding: 2.5rem 2.25rem 2.5rem 2.25rem;*/
         border-radius: 1.5rem;
+    }
+    #hebergements, .populaires, #activites{
+        padding-top: 2.875rem;
+    }
+}
+@media screen and (min-width: 992px){
+    #hebergements{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        padding-bottom: 2.875rem;
+    } 
+    .populaires{
+        padding-left: 2.25rem;
+        padding-right: 2.5rem;
+        padding-bottom: 2.125rem;
+    } 
+    #activites{
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 3.75rem;
+    } 
+    .hebergements__conteneur{
+        margin-top: 1.375rem;
+    }
+    .populaires__conteneur{
+        margin-top: 1.5rem;
+    }
+    .activites__conteneur{
+        margin-top: 1.75rem;
+    }
+}
+
+.plus{
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+@media screen and (min-width: 768px){
+    .plus{
+        margin-top: 2.625rem;
     }
 }
 
@@ -280,8 +320,7 @@ form{
 }
 
 .populaires h2, .populaires__head .fas{
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 @media screen and (min-width: 992px){
@@ -296,16 +335,7 @@ form{
     }
 }
 
-.plus{
-    font-size: 0.875rem;
-    font-weight: bold;
-    margin: 0.25rem;
-}
-@media screen and (min-width: 992px){
-    .plus{
-        margin: 0.25rem;
-    }
-}
+
 
 /* Mise en forme d'une carte par défaut */
 
@@ -317,8 +347,8 @@ form{
     box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #F2F2F2;
     padding: 0.3rem;
     background-color: #FFFFFF;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    /*margin-top: 0.5rem; 
+    margin-bottom: 0.5rem;*/ /*mettre space between??? */
 }
 
 .carte__img{
@@ -452,7 +482,7 @@ form{
 
 .carte--activite{
     padding: 0;
-    margin-top: 1.25rem;
+    /*margin-top: 1.25rem;*/
 }
 
 .carte--activite h3{
@@ -464,7 +494,7 @@ form{
 /* Activités */
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px){
     .activites__conteneur .carte--activite{
         display: flex;
         flex-direction: column;
@@ -539,7 +569,7 @@ footer li{
     margin-bottom: 0.8rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px){
     footer{
         display: flex;
     }
