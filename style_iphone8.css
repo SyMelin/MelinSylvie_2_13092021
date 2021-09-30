@@ -322,14 +322,14 @@ font-size: 1.125rem;
     margin-bottom: 0.5rem;
 }
 
-.image{
+.carte__img{
     width: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 0.8rem 0.8rem 0 0;
 }
 @media screen and (max-width: 768px){
-    .image{
+    .carte__img{
         height: 7rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
     }
 }
@@ -367,11 +367,11 @@ font-size: 1.125rem;
     display: flex;
 }
 
-.carte--populaire .image{
+.carte--populaire .carte__img{
     border-radius: 0.8rem 0 0 0.8rem;
 }
 @media screen and (max-width: 768px){
-    .carte--populaire .image{
+    .carte--populaire .carte__img{
         width: 6.5rem;  
         height: 6.5rem;
     }

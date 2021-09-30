@@ -321,14 +321,14 @@ form{
     margin-bottom: 0.5rem;
 }
 
-.image{
+.carte__img{
     width: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 0.8rem 0.8rem 0 0;
 }
 @media screen and (min-width: 992px){
-    .image{
+    .carte__img{
         height: 7.125rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
     }
 }
@@ -366,11 +366,11 @@ form{
     display: flex;
 }
 
-.carte--populaire .image{
+.carte--populaire .carte__img{
     border-radius: 0.8rem 0 0 0.8rem;
 }
 @media screen and (min-width: 992px){
-    .carte--populaire .image{
+    .carte--populaire .carte__img{
         width: 7.9rem;  
         height: 8.3rem;
     }
@@ -422,7 +422,7 @@ form{
     .hebergements__conteneur .carte{
         width: 30%;
     }
-    .image{
+    .carte__img{
         height: 7rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
     }
     .populaires{
@@ -437,7 +437,7 @@ form{
     .carte--populaire{
         width: 30%;
     }
-    .carte--populaire .image{
+    .carte--populaire .carte__img{
         width: 6rem;  
         height: 7rem;
     }
@@ -474,7 +474,7 @@ form{
         margin: 0;
     }
 
-    .carte--activite .image{
+    .carte--activite .carte__img{
         flex: 1;
     }
 
