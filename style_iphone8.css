@@ -296,7 +296,7 @@ font-size: 1.125rem;
 }
 
 @media screen and (max-width: 768px){
-    #hebergements, .populaires, #activites{
+    #hebergements, .populaires, #activites, footer{
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
@@ -454,36 +454,32 @@ font-size: 1.125rem;
 /* Pied-de-page */
 
 footer{
-    padding-top: 3rem;
-    margin-left: -1.2rem;
-    margin-right: -1.2rem;
-    /*padding: 1.5rem 1.5rem 0 1.5rem;*/
-    display: flex;
+    padding-top: 3.125rem;
+    padding-bottom: 0.125rem;
+    margin-bottom: -0.5rem; /* Sinon, espace entre bordure container et éléments intérieurs */
 }
 
 footer h3{
     font-weight: bold;
     margin-bottom: 1.5rem;
-}
-
-footer div{
-    min-width: 33%;
-    margin: 0 1.875rem 1.875rem 1.875rem;
+    margin-top: 0;
 }
 
 footer ul{
     list-style-type: none;
     padding-left: 0;
     margin-bottom: 0;
-}
+ }
 
 footer li{
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.125rem;
 }
 
 @media screen and (max-width: 768px) {
-    footer{
-        display: flex;
-        flex-direction: column;
+    footer div{
+        margin-bottom: 1.875rem;
+    }
+    .nos_hebergements{
+      margin-bottom: 2.5rem;
     }
 }
