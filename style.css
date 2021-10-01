@@ -1,38 +1,33 @@
 /* // CSS valable quelque soit le support // */
 
 /* -- Général -- */
-
 body{
     background-color: #FFFFFF;
-}
-.container{
     font-family: 'Raleway', sans-serif;
     font-size: 0.8rem;
+}
+.container, .footer__conteneur{
+    max-width: 1199px; /*Largeur d'écran max pour ordinateur moyen*/
 }
 .populaires, footer{
     background-color: #f2f2f2;
 }
-
 #hebergements h2, .populaires__head, #activites h2{
     margin: 0;
 }
-
 h1, h2{
     font-size: 1.1rem;
     font-weight: bold;
 }
-
 a{
     text-decoration: none;
     color: black;
 }
-
 ul{
     list-style-type: none;
 }
 
 /* -- En-tête -- */
-
 .header__top{
     display: flex;
     flex-wrap: wrap;
@@ -40,30 +35,24 @@ ul{
     justify-content: space-between;
     padding-top: 0;
 }
-
 #logo{
     order: 1;
 }
-
 #logo img{
     height: 2.2rem;
     width: auto; /* garde le ration lors du redimensionnement de l'image */
 }
-
 nav ul{
     display: flex;
     padding-left: 0%;
 }
-
 nav a{
     display: block;
     border-top: 0.2rem solid #FFFFFF;
 }
-
 #inscription{
     margin-left: 1.2rem;
 }
-
 #inscription a{
     color: #0065FC;
     font-weight: bold;
@@ -71,21 +60,16 @@ nav a{
 }
 
 /* -- Recherche - Formulaire -- */
-
 form{
     display: flex;
     align-items: center;
 }
-
 .form__field, .form__btn{
     height: 2.9rem;
-
 }
-
 .form .fa{
 font-size: 1.125rem;
 }
-
 .form__ico{
     width: 3.25rem;
     height: 2rem;
@@ -94,7 +78,6 @@ font-size: 1.125rem;
     text-align: center;
     padding-top: 0.92rem;
 }
-
 .form__field{
     font-size: 0.8rem;
     font-weight: bold;
@@ -103,13 +86,12 @@ font-size: 1.125rem;
     border-right: none;
     width: 100%;
 }
-
 .form__field:focus{
     outline: 1px solid #0065FC;
 }
-/* Attention : Removing outlines in CSS creates issues for people navigating the web with a keyboard. */
-/* Il faut le remplacer par un autre indicateur */
-
+    /* Attention : Removing outlines in CSS creates issues for people navigating the web with a keyboard. */
+    /* Problème d'accessibilité également pour les personnes utilisant un screen readers : elles ne pourront pas voir où se trouve le pointeur */
+    /* Il faut le remplacer par un autre indicateur */
 .form__btn{
     color: #FFFFFF;
     background-color: #0065FC;
@@ -117,12 +99,6 @@ font-size: 1.125rem;
 }
 
 /* -- Recherche - Filtres -- */
-
-.filtres{
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-}
 
 .filtres ul {
     display: flex;
@@ -132,7 +108,6 @@ font-size: 1.125rem;
     margin-left: 0;
     margin-bottom: 0;
 }
-
 .filtre-ico{
     padding: 0.5rem 0.3rem 0.5rem 0.3rem;
     margin: 0 0.7rem 0 -0.1rem;
@@ -141,7 +116,6 @@ font-size: 1.125rem;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
     color: #0065FC;
 }
-
 .filtres li{
     height: 1rem;
     padding: 0.6rem 0.8rem 0.6rem 0;
@@ -150,7 +124,6 @@ font-size: 1.125rem;
     border-left: none;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
-
 .filtres li:hover{
     color: #FFFFFF;
     background-color: #0065FC;
@@ -158,12 +131,10 @@ font-size: 1.125rem;
 }
 
 /* -- Recherche - Nombre de résultats obtenus -- */
-
 .nb-resultats data{
     display: block;
     padding-top: 0.4rem;
 }
-
 .fa-info{
     padding: 0.4rem 0.3rem 0.4rem 0.3rem;
     margin-right: 0.5rem;
@@ -175,7 +146,6 @@ font-size: 1.125rem;
 }
 
 /* -- Mise en forme d'une carte par défaut -- */
-
 .carte{
     display: block;
     height: auto;
@@ -187,81 +157,65 @@ font-size: 1.125rem;
     /*margin-top: 0.5rem; 
     margin-bottom: 0.5rem;*/ /*mettre space between??? */
 }
-
 .carte__img{
     width: 100%;
     object-fit: cover;
     object-position: center;
     border-radius: 0.8rem 0.8rem 0 0;
 }
-
 .carte__infos{
     margin-left: 1rem;
     font-size: 0.7rem;
 }
-
 .carte__infos h3{
     font-size: 0.75rem;
 }
-
 .carte__infos h3,.carte__infos p{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
-
 .carte-prix, .carte-devise{
     font-weight: bold;
     font-style: normal;
 }
-
 .star--couleur{
     color: #0065FC;
 }
-
 .star--estompe{
     color: #F2F2F2;
 }
 
 /* -- Mise en forme d'une carte pour hébergement populaire -- */
-
 .carte--populaire{
     display: flex;
 }
-
 .carte--populaire .carte__img{
     border-radius: 0.8rem 0 0 0.8rem;
 }
-
 .carte--populaire .carte__infos{
     display: flex;
     flex-direction: column;
     align-content: stretch;
 }
-
 .carte--populaire h3, .carte--populaire .tarif, .carte--populaire .etoiles{
     margin: 0;
 }
-
 .carte--populaire h3{
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
 }
-
 .carte--populaire .tarif{
     flex: 1;
 }
-
 .carte--populaire .etoiles{
     padding-bottom: 0.2rem;
 }
 
 /*Mise en forme d'une carte d'activité */
-
 .carte--activite{
     padding: 0;
     margin-top: 1.25rem;
 }
-
 .carte--activite h3{
     font-size: 0.8rem;
     padding-left: 1rem;
@@ -269,58 +223,46 @@ font-size: 1.125rem;
 }
 
 /* -- Résultats de la recherche -- */
-
 .resultats{
     display: flex;
 }
-
 .plus{
     font-size: 0.875rem;
     font-weight: bold;
 }
-
 .populaires__head{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .populaires h2, .populaires__head .fas{
     margin:0;
 }
 
 /* -- Activités -- */
-
 #activites{
     border: 1px solid black;
     /*margin-bottom: 3em;*/
 }
 
 /* -- Pied-de-page -- */
-
 footer{
     padding-top: 3.125rem;
     padding-bottom: 0.125rem;
-    margin-bottom: -0.5rem; /* Sinon, espace entre bordure .container et éléments intérieurs */
+    margin: 0 -0.5rem -0.5rem 0; /* Sinon, espace entre bordure .container et éléments intérieurs */
 }
-
 footer h3{
     font-weight: bold;
     margin-bottom: 1.5rem;
     margin-top: 0;
 }
-
 footer ul{
     list-style-type: none;
     padding-left: 0;
- }
-
+}
 footer li{
     margin-bottom: 1.125rem;
 }
-
-
-
 
 
 
@@ -328,11 +270,8 @@ footer li{
 
 
 @media screen and (max-width: 768px){
-
     /* -- Général -- */
-
     /* -- En-tête -- */
-
     #logo{
         min-width: 65%;
     }
@@ -360,21 +299,12 @@ footer li{
         order: 2;
         width: 25%;
     }
-
     /* -- Recherche - Formulaire -- */
-
     .p__field{
     width: 100%;
     }
-    #textsearch{
-        display: none;
-    }
-    .form__btn{
-        width: 2.9rem;
-        height: 2.86rem;
-        border-radius: 1rem;
-        margin-top: -1px;
-        
+    .form__field{
+        padding-right: 3rem;
     }
     .p__btn{
         border: 1px solid #F2F2F2;
@@ -382,42 +312,33 @@ footer li{
         border-right: none;
         border-radius: 0 1rem 1rem 0;
         height: 2.77rem;
+        margin-left: -0.9rem;
     }
-
+    .form__btn{
+        width: 2.9rem;
+        height: 2.89rem;
+        border-radius: 1rem;
+        margin-top: -1px;
+    }
+    #textsearch{
+        display: none;
+    }
     /* -- Recherche - Filtres -- */
-
-    .filtres h4{
-        margin-right: 2rem;
-    }
-
-    .filtres{
-        flex-direction: column ;
-        justify-content: flex-start;
-        align-items: baseline;
-    }
-
     .filtres h4{
         margin-bottom: 0;
     }
-
     /* -- Recherche - Nombre de résultats obtenus -- */
-
     /* -- Mise en forme d'une carte par défaut -- */
-
     .carte__img{
         height: 7rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
     }
-
     /* -- Mise en forme d'une carte pour hébergement populaire -- */
-
     .carte--populaire .carte__img{
         width: 6.5rem;  
         height: 6.5rem;
     }
-
      /* -- Résultats de la recherche -- */
-
-     .resultats{
+    .resultats{
         flex-flow: wrap column;
         justify-content: flex-start;
     }
@@ -427,33 +348,18 @@ footer li{
     }
     .populaires{
         order: 1;
-    }  
-    header, .recherche, #hebergements, .populaires, #activites, footer{
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
     }
-    .hebergements__conteneur{
-        margin: 1.25rem 0rem 2.25rem 0rem;
-    }
-    .populaires__conteneur{
-        margin: 1.5rem 0rem 2.25rem 0rem;
-    }
-    .activites__conteneur{
-        margin: 2rem 0 3rem 0;
-    }
-    .plus{
-        margin-bottom: 1rem;
-    }
-
     /* -- Activités -- */
-
     /* -- Pied-de-page -- */
-
+    footer{
+        margin-left: -0.5rem; /* Sinon, espace entre bordure container et éléments intérieurs */
+        margin-right: -0.5rem; /* Sinon, espace entre bordure container et éléments intérieurs */
+    }
     footer div{
         margin-bottom: 1.875rem;
     }
     .nos_hebergements{
-      margin-bottom: 2.5rem;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -461,14 +367,11 @@ footer li{
 @media screen and (min-width: 768px){
 
     /* -- Général -- */
-
     header, .recherche{
         padding-left: 4px;
         /*border: 1px solid black;*/
     }
-    
     /* -- En-tête -- */
-
     #logo{
         flex: 1;
         padding-top: 2rem;
@@ -500,10 +403,7 @@ footer li{
         padding-top: 3rem;
         margin-top: 0;
     }
-
     /* -- Recherche - Formulaire -- */
-    /* -- Recherche - Filtres -- */
-
     .p__field{
         width: 14.5rem;
     }
@@ -515,19 +415,23 @@ footer li{
         font-weight: bold;
         border-radius: 0 1rem 1rem 0;
     }
-
+    /* -- Recherche - Filtres -- */
+    .filtres{
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+    .filtres h4{
+        margin-right: 2rem;
+    }
     /* -- Recherche - Nombre de résultats obtenus -- */
     /* -- Mise en forme d'une carte par défaut -- */
     /* -- Mise en forme d'une carte pour hébergement populaire -- */
-
     /* -- Résultats de la recherche -- */
-
     .plus{
         margin-top: 2.625rem;
     }
-
     /* -- Activités -- */
-
     .activites__conteneur .carte--activite{
         display: flex;
         flex-direction: column;
@@ -536,11 +440,9 @@ footer li{
         height: 100%;
         margin: 0;
     }
-
     .carte--activite .carte__img{
         flex: 1;
     }
-
     .activites__conteneur{
         display: grid;
         grid-template: repeat(10, 1.5em) / repeat(4, 1fr);
@@ -564,15 +466,10 @@ footer li{
     #six{
         grid-row: 6 / 11;
     }
-
     /* -- Pied-de-page -- */
-    footer{
-        margin-left: -3.125rem;
-        margin-right: -3.125rem;
-        padding-left: 3.125rem;
-        padding-right: 3.125rem;
+    .footer__conteneur{
+        margin: auto;
         display: flex;
-        flex-direction: row;
     }
     footer div{
         min-width: 33%;
@@ -588,16 +485,13 @@ footer li{
     /* -- Recherche - Filtres -- */
     /* -- Recherche - Nombre de résultats obtenus -- */
     /* -- Mise en forme d'une carte par défaut -- */
-    
     .hebergements__conteneur .carte{
         width: 30%;
     }
     .carte__img{
         height: 7rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
     }
-    
     /* -- Mise en forme d'une carte pour hébergement populaire -- */
-    
     .carte--populaire{
         width: 30%;
     }
@@ -610,9 +504,7 @@ footer li{
         max-width: 10rem;
         margin: 0.5rem;
     }
-
     /* -- Résultats de la recherche -- */
-
     .resultats{
             flex-flow: wrap column;
             justify-content: flex-start;
@@ -625,7 +517,6 @@ footer li{
         flex-flow: wrap row;
         justify-content: space-around;
     }
-    
     .populaires{
         order: 1;
     }
@@ -633,64 +524,62 @@ footer li{
         display: flex;
         justify-content: space-between;
     }
-    
     /* -- Activités -- */
     /* -- Pied-de-page -- */
-
 }
 
 
 @media screen and (max-width: 992px){
-
     /* -- Général -- */
-
     .container{
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: -0.5rem; /* Sinon, espace entre bordure container et éléments intérieurs */
-        margin-right: -0.5rem; /* Sinon, espace entre bordure container et éléments intérieurs */
+        padding: 0;
+        margin: -0.5rem;
     }
-
+    header, .recherche, #hebergements, .populaires, #activites, .footer__conteneur{
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
     /* -- Recherche - Formulaire -- */
     /* -- Recherche - Filtres -- */
     /* -- Recherche - Nombre de résultats obtenus -- */
     /* -- Mise en forme d'une carte par défaut -- */
     /* -- Mise en forme d'une carte pour hébergement populaire -- */
-    
     /* -- Résultats de la recherche -- */
-
     #hebergements, .populaires, #activites{
         padding-top: 2.625rem;
         border: 1px solid black;
     }
-
+    .hebergements__conteneur{
+        margin: 1.25rem 0rem 2.25rem 0rem;
+    }
+    .populaires__conteneur{
+        margin: 1.5rem 0rem 2.25rem 0rem;
+    }
+    .activites__conteneur{
+        margin: 2rem 0 3rem 0;
+    }
+    .plus{
+        margin-bottom: 1rem;
+    }
     /* -- Activités -- */
     /* -- Pied-de-page -- */
 }
 
 
 @media screen and (min-width: 992px){
-
     /* -- Général -- */
-
     .container{
         padding: 0 3.125rem 0 3.125rem;
         margin: auto;
-        max-width: 1199px; /*Largeur d'écran max pour ordinateur moyen*/
     }
-
     /* -- Recherche - Formulaire -- */
     /* -- Recherche - Filtres -- */
     /* -- Recherche - Nombre de résultats obtenus -- */
-
     /* -- Mise en forme d'une carte par défaut -- */
-
     .carte__img{
         height: 7.125rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
     }
-
     /* -- Mise en forme d'une carte pour hébergement populaire -- */
-    
     .carte--populaire .carte__img{
         width: 7.9rem;  
         height: 8.3rem;
@@ -700,9 +589,7 @@ footer li{
         max-width: 8.3rem;
         margin: 0.5rem;
     }
-
     /* -- Résultats de la recherche -- */
-
     #hebergements{
         order: 1;
         flex: 1;
@@ -726,7 +613,6 @@ footer li{
     .populaires{
         padding-left: 2.25rem;
         padding-right: 2.5rem;
-        padding-bottom: 2.125rem;
     } 
     #activites{
         padding-left: 0;
@@ -737,18 +623,20 @@ footer li{
         margin-top: 1.375rem;
         display: flex;
         flex-flow: wrap row;
-        justify-content: space-around;
+        gap: 1.25rem;
     }
     .populaires__conteneur{
         margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
     }
     .activites__conteneur{
         margin-top: 1.75rem;
     }
     .hebergements__conteneur .carte{
-        width: 30%;
+        width: 12rem;
     }
-
     /* -- Activités -- */
     /* -- Pied-de-page -- */
 }

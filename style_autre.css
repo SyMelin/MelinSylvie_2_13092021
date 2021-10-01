@@ -596,7 +596,7 @@ data{
 
 
 /*footer*/
-footer{
+/*footer{
     padding: 1.5rem 1.5rem 0 1.5rem;
     display: flex;
 }
@@ -623,7 +623,7 @@ footer li{
 
 footer div{
     margin-bottom: 30px;
-}
+}*/
 
 @media screen and (max-width: 600px) {
     footer{
