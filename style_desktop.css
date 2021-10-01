@@ -3,10 +3,10 @@ body{
 }
 .container{
     font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
 }
 @media screen and (min-width: 992px){
     .container{
-        font-size: 0.8rem; /*A verif */
         padding: 0 3.125rem 0 3.125rem;
         margin: auto;
         max-width: 1199px; /*Largeur d'écran max pour ordinateur moyen*/
@@ -14,10 +14,11 @@ body{
 }
 
 .populaires, footer{
-    background-color: #f2f2f2;
+    background-color: #F2F2F2;
 }
 
 h1, h2{
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
@@ -26,8 +27,9 @@ h1, h2{
 }
 
 @media screen and (min-width: 768px){
-    h1, h2{
-        font-size: 1.1rem;
+    header, .recherche{
+        padding-left: 4px;
+        /*border: 1px solid black;*/
     }
 }
 
@@ -53,16 +55,19 @@ ul{
 #logo{
     order: 1;
 }
+
 @media screen and (min-width: 768px){
     #logo{
-        order: 1;
         flex: 1;
         padding-top: 2rem;
+    }
+    .header__top{
+        margin-bottom: 2rem;
     }
 }
 
 #logo img{
-    height: 2rem;
+    height: 2.2rem;
     width: auto; /* garde le ration lors du redimensionnement de l'image */
 }
 
@@ -96,22 +101,23 @@ nav a{
         padding-left: 1.5rem;
         margin-right: 1.1rem;
     }
-}
-
-nav a:hover{
+    nav a:hover{
     color: #0065FC;
     border-top: 0.2rem solid #0065FC;
+    }
 }
+
+
 
 #inscription{
     margin-left: 1.2rem;
-    margin-top: 0;
+    text-align: right;
 }
 @media screen and (min-width: 768px){
     #inscription{
         order: 3;
-        text-align: right;
         padding-top: 3rem;
+        margin-top: 0;
     }
 }
 
@@ -121,8 +127,6 @@ nav a:hover{
 }
 @media screen and (min-width: 768px){
     #inscription a{
-        color: #0065FC;
-        font-weight: bold;
         padding-right: 1.5rem;
         padding-left: 1.5rem;
     }
@@ -234,7 +238,7 @@ form{
     border-color: #0065FC;
 }
 
-/* Nombre de résultats obtenus */
+/* Recherche - Nombre de résultats obtenus */
 
 .nb-resultats data{
     display: block;
@@ -251,7 +255,7 @@ form{
     color: #0065FC;
 }
 
-/*Résultats de la recherche */
+/* Résultats de la recherche */
 
 .resultats{
     display: flex;
@@ -260,7 +264,6 @@ form{
     #hebergements{
         order: 1;
         flex: 1;
-       /* padding: 2.5rem;*/
         border-radius: 1.5rem;
         background-color: #F2F2F2;
     }
@@ -268,14 +271,11 @@ form{
         order: 2;
         width: 28%;
         margin-left: 2rem;
-        /*padding: 2.5rem 2.25rem 2.5rem 2.25rem;*/
         border-radius: 1.5rem;
     }
     #hebergements, .populaires, #activites{
         padding-top: 2.875rem;
     }
-}
-@media screen and (min-width: 992px){
     #hebergements{
         padding-left: 2.5rem;
         padding-right: 2.5rem;
@@ -381,11 +381,11 @@ form{
     font-style: normal;
 }
 
-.star--blue{
+.star--couleur{
     color: #0065FC;
 }
 
-.star--gray{
+.star--estompe{
     color: #F2F2F2;
 }
 
@@ -409,12 +409,12 @@ form{
     display: flex;
     flex-direction: column;
     align-content: stretch;
-    max-width: 8.3rem;
-    margin: 0.5rem;
 }
 @media screen and (min-width: 992px){
     .carte--populaire .carte__infos{
         margin-left: 1.25rem;
+        max-width: 8.3rem;
+        margin: 0.5rem;
     }
 }
 
@@ -545,6 +545,7 @@ footer{
 footer h3{
     font-weight: bold;
     margin-bottom: 1.5rem;
+    margin-top: 0;
 }
 
 footer ul{

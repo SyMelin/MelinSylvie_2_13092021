@@ -3,10 +3,10 @@ body{
 }
 .container{
     font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
 }
 @media screen and (max-width: 992px){
     .container{
-        font-size: 0.75rem;/*A verif */
         padding-left: 0;
         padding-right: 0;
         margin-left: -0.5rem; /* Sinon, espace entre bordure container et éléments intérieurs */
@@ -19,17 +19,12 @@ body{
 }
 
 h1, h2{
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
 #hebergements h2, .populaires__head, #activites h2{
     margin: 0;
-}
-
-@media screen and (max-width: 768px){
-    h1, h2{
-        font-size: 1rem;
-    }
 }
 
 a{
@@ -54,14 +49,18 @@ ul{
 #logo{
     order: 1;
 }
+
 @media screen and (max-width: 768px){
     #logo{
         min-width: 65%;
     }
+    .header__top{
+        margin-top: 1.75rem;;
+    }
 }
 
 #logo img{
-    height: 2rem;
+    height: 2.2rem;
     width: auto; /* garde le ration lors du redimensionnement de l'image */
 }
 
@@ -94,22 +93,20 @@ nav a{
         border-bottom: 0.2rem solid #f2f2f2;
         padding-bottom: 0.8rem;
     }
-}
-
-nav a:hover{
-    color: #0065FC;
-    border-bottom: 0.2rem solid #0065FC;
+    nav a:hover{
+        color: #0065FC;
+        border-bottom: 0.2rem solid #0065FC;
+    }
 }
 
 #inscription{
     margin-left: 1.2rem;
+    text-align: right;
 }
 @media screen and (max-width: 768px){
     #inscription{
         order: 2;
         width: 25%;
-        font-size: 0.8rem;
-        text-align: right;
     }
 }
 
@@ -242,7 +239,7 @@ font-size: 1.125rem;
      }
  }
 
-/* Nombre de résultats obtenus */
+/* Recherche - Nombre de résultats obtenus */
 
 .nb-resultats data{
     display: block;
@@ -259,7 +256,7 @@ font-size: 1.125rem;
     color: #0065FC;
 }
 
-/*Résultats de la recherche */
+/* Résultats de la recherche */
 
 .resultats{
     display: flex;
@@ -272,20 +269,10 @@ font-size: 1.125rem;
     #hebergements{
         order: 2;
         border: 1px solid black;
-
     }
     .populaires{
         order: 1;
-        /*margin-left: -1.2rem;
-        margin-right: -1.2rem;*/
-       /* padding-bottom: 2rem;*/
-    }
-    /*
-    .populaires__head, .populaires__conteneur{
-        margin-left: 1.2rem;
-        margin-right: 1.2rem;
-    }*/
-    
+    }    
 }
 
 @media screen and (max-width: 992px){
@@ -296,7 +283,7 @@ font-size: 1.125rem;
 }
 
 @media screen and (max-width: 768px){
-    #hebergements, .populaires, #activites, footer{
+    header, .recherche, #hebergements, .populaires, #activites, footer{
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
@@ -310,6 +297,8 @@ font-size: 1.125rem;
         margin: 2rem 0 3rem 0;
     }
 }
+
+
 .plus{
     font-size: 0.875rem;
     font-weight: bold;
@@ -325,11 +314,7 @@ font-size: 1.125rem;
     justify-content: space-between;
     align-items: center;
 }
-@media screen and (max-width: 768px){
-    /*.populaires__head{
-        margin-bottom: 1.25rem;
-    }*/
-}
+
 .populaires h2, .populaires__head .fas{
     margin:0;
 }
@@ -381,11 +366,11 @@ font-size: 1.125rem;
     font-style: normal;
 }
 
-.star--blue{
+.star--couleur{
     color: #0065FC;
 }
 
-.star--gray{
+.star--estompe{
     color: #F2F2F2;
 }
 
