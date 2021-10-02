@@ -35,9 +35,7 @@ ul{
     justify-content: space-between;
     padding-top: 0;
 }
-#logo{
-    order: 1;
-}
+
 #logo img{
     height: 2.2rem;
     width: auto; /* garde le ration lors du redimensionnement de l'image */
@@ -145,7 +143,7 @@ form{
     margin-right: 0.5rem;
     margin-top: 0rem;
     float: left;
-    border: 1px solid #F2F2F2;
+    border: 1px solid #d9d9d9;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
     color: #0065FC;
 }
@@ -156,7 +154,7 @@ form{
     height: auto;
     border: 1px solid #F2F2F2;
     border-radius: 1rem;
-    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #F2F2F2;
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #d9d9d9;
     padding: 0.3rem;
     background-color: #FFFFFF;
     /*margin-top: 0.5rem; 
@@ -187,7 +185,7 @@ form{
     color: #0065FC;
 }
 .star--estompe{
-    color: #F2F2F2;
+    color: #d9d9d9;
 }
 
 /* -- Mise en forme d'une carte pour hébergement populaire -- */
@@ -274,14 +272,15 @@ footer li{
 /* // MEDIA QUERIES // */
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     /* -- Général -- */
     /* -- En-tête -- */
-    #logo{
-        min-width: 65%;
+     .header__top{
+        margin-top: 1.75rem;
     }
-    .header__top{
-        margin-top: 1.75rem;;
+    #logo{
+        order: 1;
+        min-width: 65%;
     }
     nav{
         order: 3;
@@ -303,6 +302,8 @@ footer li{
     #inscription{
         order: 2;
         width: 25%;
+        text-align: right;
+        padding-top: 0.25rem;
     }
     /* -- Recherche - Formulaire -- */
     .p__field{
@@ -332,7 +333,7 @@ footer li{
     }
     /* -- Mise en forme d'une carte pour hébergement populaire -- */
     .carte--populaire .carte__img{
-        width: 6.5rem;  
+        width: 33%;
         height: 6.5rem;
     }
      /* -- Résultats de la recherche -- */
@@ -365,17 +366,18 @@ footer li{
 @media screen and (min-width: 768px){
 
     /* -- Général -- */
-    header, .recherche{
-        padding-left: 4px;
-        /*border: 1px solid black;*/
+    .header, .form{
+        padding-left: 0.375rem;
     }
     /* -- En-tête -- */
     #logo{
         flex: 1;
         padding-top: 2rem;
+        border: 1px solid black;
     }
     .header__top{
         margin-bottom: 2rem;
+        padding-right: 1.625rem;
     }
     nav{
         order: 2;
@@ -398,7 +400,7 @@ footer li{
     }
     #inscription{
         order: 3;
-        padding-top: 3rem;
+        padding-top: 3.1rem;
         margin-top: 0;
     }
     /* -- Recherche - Formulaire -- */
@@ -415,6 +417,7 @@ footer li{
     }
     /* -- Recherche - Filtres -- */
     .filtres{
+        padding-left: 0.875rem;
         display: flex;
         justify-content: flex-start;
         align-items: baseline;
@@ -423,6 +426,10 @@ footer li{
         margin-right: 2rem;
     }
     /* -- Recherche - Nombre de résultats obtenus -- */
+    /* -- Recherche - Nombre de résultats obtenus -- */
+    .nb-resultats{
+        padding-left: 0.625rem;
+    }
     /* -- Mise en forme d'une carte par défaut -- */
     /* -- Mise en forme d'une carte pour hébergement populaire -- */
     /* -- Résultats de la recherche -- */
@@ -476,9 +483,10 @@ footer li{
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 992px){
+@media screen and (min-width: 768px) and (max-width: 1023px){
 
     /* -- Général -- */
+    /* -- En-tête -- */
     /* -- Recherche - Formulaire -- */
     /* -- Recherche - Filtres -- */
     /* -- Recherche - Nombre de résultats obtenus -- */
@@ -494,13 +502,19 @@ footer li{
         width: 30%;
     }
     .carte--populaire .carte__img{
-        width: 6rem;  
+        width: 5.5rem;  
         height: 7rem;
     }
+    .carte--populaire h3{
+        height: 1.75rem;
+    }
     .carte--populaire .carte__infos{
-        margin-left: 1rem;
-        max-width: 10rem;
-        margin: 0.5rem;
+        min-width: 6.8rem;
+        margin-left: 0.8rem;
+        margin-right: 0.6rem;
+    }
+    .carte--populaire .carte__infos .tarif{
+        white-space: nowrap;
     }
     /* -- Résultats de la recherche -- */
     .resultats{
@@ -521,13 +535,14 @@ footer li{
     .populaires__conteneur{
         display: flex;
         justify-content: space-between;
+        gap: 0.5rem;
     }
     /* -- Activités -- */
     /* -- Pied-de-page -- */
 }
 
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 1023px){
     /* -- Général -- */
     .container{
         padding: 0;
@@ -537,6 +552,7 @@ footer li{
         padding-left: 1.25rem;
         padding-right: 1.25rem;
     }
+    /* -- En-tête -- */
     /* -- Recherche - Formulaire -- */
     /* -- Recherche - Filtres -- */
     /* -- Recherche - Nombre de résultats obtenus -- */
@@ -564,28 +580,28 @@ footer li{
 }
 
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1024px){
     /* -- Général -- */
     .container{
         padding: 0 3.125rem 0 3.125rem;
         margin: auto;
-    }
-    /* -- Recherche - Formulaire -- */
-    /* -- Recherche - Filtres -- */
-    /* -- Recherche - Nombre de résultats obtenus -- */
+    }   
     /* -- Mise en forme d'une carte par défaut -- */
     .carte__img{
         height: 7.125rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
     }
     /* -- Mise en forme d'une carte pour hébergement populaire -- */
     .carte--populaire .carte__img{
-        width: 7.9rem;  
-        height: 8.3rem;
+        width: 7rem;  
+        height: 7.5rem;
     }
     .carte--populaire .carte__infos{
-        margin-left: 1.25rem;
-        max-width: 8.3rem;
-        margin: 0.5rem;
+       /* margin-left: 1.25rem;*/
+        width: 12rem;
+        /*margin: 0.5rem;*/
+    }
+    .carte--populaire .carte__infos .tarif{
+        white-space: nowrap;
     }
     /* -- Résultats de la recherche -- */
     #hebergements{
