@@ -36,6 +36,7 @@ body{
 }
 .container, .footer__conteneur{
     max-width: 1199px; /*Largeur d'écran max pour ordinateur moyen*/
+    margin: auto;
     /*border: 1px solid black;*/
 }
 .populaires, footer{
@@ -56,13 +57,14 @@ ul{
     list-style-type: none;
 }
 .recherche{
+    padding-top: 0;
     padding-bottom: 1.5rem;
 }
 
 /* -- En-tête -- */
 header{
-    padding-bottom: 0.4rem;
-    /*border: 1px solid black;*/
+    
+   /* border: 1px solid black;*/
 }
 .header__top{
     display: flex;
@@ -180,8 +182,7 @@ form{
     margin-top: 0.2rem;
     float: left;
     border: 1px solid #d9d9d9;
-    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
-    
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;  
 }
 
 /* -- Mise en forme d'une carte par défaut -- */
@@ -289,8 +290,9 @@ form{
 footer{
     padding-top: 2.9rem;
     padding-bottom: 0.125rem;
-    margin: 0 -0.5rem -0.5rem 0; /* Sinon, espace entre bordure .container et éléments intérieurs */ 
+  /*  margin: 0 -0.5rem -0.5rem 0; /* Sinon, espace entre bordure .container et éléments intérieurs */ 
 }
+
 footer h3{
     font-weight: bold;
     margin-bottom: 0.75rem;
@@ -414,6 +416,9 @@ footer li{
         row-gap: 0.8rem;
     }
     /* -- Activités -- */
+    #activites{
+        margin-bottom: 3rem;
+    }
     .activites__conteneur{
         display: flex;
         flex-direction: column;
@@ -421,9 +426,9 @@ footer li{
     }
     /* -- Pied-de-page -- */
     footer{
-        margin-left: -0.5rem; /* Sinon, espace entre bordure container et éléments intérieurs */
-        margin-right: -0.5rem; /* Sinon, espace entre bordure container et éléments intérieurs */
-    }
+       /* margin-left: -0.5rem; /* Sinon, espace entre bordure container et éléments intérieurs */
+       /* margin-right: -0.5rem;*/ /* Sinon, espace entre bordure container et éléments intérieurs */}
+/*}*/
     footer div{
         margin-bottom: 2rem;
     }
@@ -439,7 +444,7 @@ footer li{
 @media screen and (min-width: 768px){
 
     /* -- Général -- */
-    .header, .form{
+    header, form{
         padding-left: 0.375rem;
     }
     /* -- En-tête -- */
@@ -477,18 +482,6 @@ footer li{
         margin-top: 0;
     }
     /* -- Recherche - Formulaire -- */
-   /* .p__field{
-        width: 14.5rem;
-    }
-    #icosearch{
-        display: none;
-    }
-    .form__btn{
-        width: 8rem;
-        height: 3.15rem;
-        font-weight: bold;
-        border-radius: 0 1rem 1rem 0;
-    }*/
     /* -- Recherche - Filtres -- */
     .filtres{
         padding-left: 0.875rem;
@@ -511,44 +504,11 @@ footer li{
         margin-top: 2.625rem;
     }
     /* -- Activités -- */
-    .activites__conteneur .carte--activite{
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100.5%;
-        height: 100%;
-        margin: 0;
-    }
-    .carte--activite .carte__img{
-        flex: 1;
-    }
-    .activites__conteneur{
-        display: grid;
-        grid-template: repeat(10, 1em) / repeat(4, 1fr);
-        grid-gap: 1.5rem;
-    }
-    #one{
-        grid-row: 1 / 11;
-    }
-    #two{
-        grid-row: 1 / 7;
-    }
-    #three{
-        grid-row: 7 / 11;
-    }
-    #four{
-        grid-row: 1 / 11;
-    }
-    #five{
-        grid-row: 1 / 6;
-    }
-    #six{
-        grid-row: 6 / 11;
-    }
+    
     /* -- Pied-de-page -- */
     .footer__conteneur{
-        margin: auto;
-        display: flex;
+       /* margin: auto;
+        display: flex;*/
     }
     footer div{
         min-width: 33%;
@@ -600,7 +560,11 @@ footer li{
 */
     .carte--activite h3{
         line-height: 1.3rem;
-        margin: 0.8rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+        text-align: center;
     }
     .carte--activite img{
         border: none;
@@ -631,6 +595,45 @@ footer li{
         gap: 0.5rem;
     }
     /* -- Activités -- */
+    .activites__conteneur{
+        margin: 1.8rem 0 3rem 0;
+    }
+    .activites__conteneur .carte--activite{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100.5%;
+        height: 100%;
+        margin: 0;
+    }
+    .carte--activite .carte__img{
+        flex: 1;
+    }
+    .activites__conteneur{
+        display: grid;
+        grid-template: repeat(10, 1em) / repeat(4, 1fr);
+        grid-gap: 1.5rem;
+    }
+    #one{
+        grid-row: 1 / 11;
+    }
+    #two{
+        grid-row: 1 / 7;
+    }
+    #three{
+        grid-row: 7 / 11;
+    }
+    #four{
+        grid-row: 1 / 11;
+    }
+    #five{
+        grid-row: 1 / 6;
+    }
+    #six{
+        grid-row: 6 / 11;
+    }
+    /* -- Pied-de-page -- */
+
     /* -- Pied-de-page -- */
 }
 
@@ -638,8 +641,9 @@ footer li{
 @media screen and (max-width: 1023px){
     /* -- Général -- */
     .container{
-        padding: 0;
-        margin: -0.5rem;
+        /*padding: 0;*/
+       /* padding-left: 1rem;;
+        margin: -0.5rem;*/
     }
     header, .recherche, #hebergements, .populaires, #activites, .footer__conteneur{
         padding-left: 1.25rem;
@@ -700,14 +704,11 @@ footer li{
     .populaires__conteneur{
         margin: 1.5rem 0rem 2.25rem 0rem;
     }
-    .activites__conteneur{
-        margin: 1.8rem 0 3rem 0;
-    }
+   
     .plus{
         margin-bottom: 0.6rem;
     }
-    /* -- Activités -- */
-    /* -- Pied-de-page -- */
+    /* -- Activités -- */ 
 }
 
 
@@ -723,7 +724,7 @@ footer li{
     .slogan p, .nb-resultats data, .plus, footer li{
         font-size: 0.8rem;
     }
-    .carte__infos h3, .fa-info{
+    .carte__infos h3, .fa-info, .carte--activite h3{
         font-size: 0.7rem;
     }
      .filtre-ico,.form__ico, .carte__infos{
@@ -736,17 +737,14 @@ footer li{
         font-size: 0.5rem;
     }
     /* -- Général -- */
-    .container{
-    /*padding: 0 2.125rem 0 2.125rem;*/
-    padding: 0 1.75rem 0 1.75rem;
-
-    margin: auto;
+    /*.container{
+        padding: 0 2.75rem 0 2.75rem;
+        margin: auto;
     }  
     /* -- En-tête -- */
     #logo img{
         height: 2.2rem;
     }
-
     /* -- Recherche - Formulaire -- */
     .form__ico{
         width: 2.5rem;
@@ -771,7 +769,9 @@ footer li{
         font-weight: bold;
         border-radius: 0 1rem 1rem 0;
     }
-
+    .slogan p{
+        margin-bottom: 0.8rem;
+    }
     /*
     .p__field{
         height: 3rem;
@@ -813,7 +813,7 @@ footer li{
     }
     /* -- Mise en forme d'une carte par défaut -- */
     #hebergements .carte{
-        width: 29%;
+        width: 28.5%;
     }
     #hebergements .carte__img{
         height: 5rem;
@@ -863,14 +863,6 @@ footer li{
         padding-top: 0;
         margin-top: 0;
     }
-    #hebergements, .populaires, #activites{
-        padding-top: 1.875rem;
-    } 
-    #activites{
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 1.75rem;
-    } 
     .hebergements__conteneur{
         margin-top: 1.375rem;
         display: flex;
@@ -883,17 +875,50 @@ footer li{
         flex-direction: column;
         row-gap: 1.5rem;
     }
-    .activites__conteneur{
-        margin-top: 1.75rem;
+    .plus{
+        margin-top: 2rem;
+        margin-bottom: 0;
     }
     .hebergements__conteneur .carte{
         width: 12rem;
     }
+    #hebergements, .populaires, #activites{
+        padding-top: 1.875rem;
+    } 
+    #activites{
+        margin-top: 1rem;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 1.75rem;
+    } 
+    .carte--activite{
+        padding: 0;
+        margin-top: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100.5%;
+        height: 100%;
+        margin: 0;
+    }
+    .carte--activite h3{
+        line-height: 1.3rem;
+        margin-left: 1rem;
+        margin-right: auto;
+        padding-left: 0;
+    }
+    .carte--activite img{
+        border: none;
+        height: 50%;
+        flex: 1;
+    }
     /* -- Activités -- */
+    
     .activites__conteneur{
+        margin-top: 1rem;
         display: grid;
-        grid-template: repeat(10, 1.5em) / repeat(4, 1fr);
-        grid-gap: 1.5rem;
+        grid-template: repeat(10, 0.8em) / repeat(4, 1fr);
+        grid-gap: 2rem;
     }
     #one{
         grid-row: 1 / 11;
