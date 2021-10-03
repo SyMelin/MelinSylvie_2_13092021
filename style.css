@@ -1,10 +1,38 @@
 /* // CSS valable quelque soit le support // */
+/* --Font-size -- */
+body{
+    font-size: 0.9rem;
+}
+h1, h2, .populaires__head .fas{
+    font-size: 1.3rem;
+}
+.form__field{
+    font-size: 1rem;
+}
+.filtres-ico, .filtres li, .carte__infos h3, .carte--activite h3, footer li{
+    font-size: 0.9rem;
+}
+.nb-resultats data{
+    font-size: 0.85rem;
+}
+.form__ico,.carte__infos{
+    font-size: 0.8rem;
+}
+.etoiles{
+    font-size: 0.75rem;
+}
+.fa-info{
+    font-size: 0.7rem;
+}
+.carte--populaire .etoiles{
+    font-size: 0.65rem;
+}
+
 
 /* -- Général -- */
 body{
     background-color: #FFFFFF;
     font-family: 'Raleway', sans-serif;
-    font-size: 0.9rem;
 }
 .container, .footer__conteneur{
     max-width: 1199px; /*Largeur d'écran max pour ordinateur moyen*/
@@ -19,12 +47,7 @@ body{
 h1, h2{
     font-weight: bold;
 }
-h1{
-    font-size: 1.3rem;
-}
-h2{
-    font-size: 1.3rem;
-}
+
 a{
     text-decoration: none;
     color: black;
@@ -78,7 +101,6 @@ form{
     height: 2.9rem;
 }
 .form__ico{
-    font-size: 0.8rem;
     width: 4rem;
     height: 2rem;
     border-radius: 1rem 0 0 1rem;
@@ -94,7 +116,6 @@ form{
 .form__field{
     height: 3rem;
     font-family: 'Raleway', sans-serif;
-    font-size: 1rem;
     font-weight: bold;
     border: none;
     padding-left: 1rem;
@@ -129,10 +150,8 @@ form{
     border: 4px solid #deebff;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
     color: #0065FC;
-    font-size: 0.9rem;
 }
 .filtres li{
-    font-size: 0.9rem;
     height: 1.55rem;
     padding: 0.925rem 1rem 0.275rem 0.95rem;
     margin: 0 0.7rem 0.8rem 0;
@@ -153,10 +172,8 @@ form{
 .nb-resultats data{
     display: block;
     padding-top: 0.4rem;
-    font-size: 0.85rem;
 }
 .fa-info{
-    font-size: 0.7rem;
     color: #0065FC;
     padding: 0.275rem 0.2rem 0.275rem 0.2rem;
     margin-right: 0.5rem;
@@ -185,10 +202,6 @@ form{
 }
 .carte__infos{
     margin-left: 0.6rem;
-    font-size: 0.8rem;
-}
-.carte__infos h3{
-    font-size: 0.9rem;
 }
 .carte__infos h3,.carte__infos p{
     margin-top: 0.35rem;
@@ -199,7 +212,6 @@ form{
     font-style: normal;
 }
 .etoiles{
-    font-size: 0.75rem;
     letter-spacing: 0.075rem;
 }
 .star--couleur{
@@ -232,7 +244,6 @@ form{
     flex: 1;
 }
 .carte--populaire .etoiles{
-    font-size: 0.65rem;
     padding-bottom: 0.5rem;
     letter-spacing: 0.075rem;
 }
@@ -250,7 +261,6 @@ form{
 .carte--activite h3{
     padding-left: 1rem;
     padding-top: 0.1rem;
-    font-size: 0.9rem;
 }
 
 /* -- Résultats de la recherche -- */
@@ -267,9 +277,6 @@ form{
 }
 .populaires h2, .populaires__head .fas{
     margin:0;
-}
-.populaires__head .fas{
-    font-size: 1.3rem;
 }
 
 /* -- Activités -- */
@@ -294,7 +301,6 @@ footer ul{
     padding-left: 0;
 }
 footer li{
-    font-size: 0.9rem;
     line-height: 1.8rem;
 }
 
@@ -337,6 +343,9 @@ footer li{
     }
     /* -- Recherche - Formulaire -- */
     .p__field{
+        width: 100%;
+    }
+   /* .p__field{
     width: 100%;
     }
     .form__field{
@@ -352,10 +361,9 @@ footer li{
     }
     #textsearch{
         display: none;
-    }
+    }*/
     /* -- Recherche - Filtres -- */
     .filtres h4{
-        font-size: 1rem;
         margin-bottom: 0;
     }
     /* -- Recherche - Nombre de résultats obtenus -- */
@@ -465,11 +473,11 @@ footer li{
     }
     #inscription{
         order: 3;
-        padding-top: 3.1rem;
+        padding-top: 3rem;
         margin-top: 0;
     }
     /* -- Recherche - Formulaire -- */
-    .p__field{
+   /* .p__field{
         width: 14.5rem;
     }
     #icosearch{
@@ -477,10 +485,10 @@ footer li{
     }
     .form__btn{
         width: 8rem;
+        height: 3.15rem;
         font-weight: bold;
-        font-size: 1.1rem;
         border-radius: 0 1rem 1rem 0;
-    }
+    }*/
     /* -- Recherche - Filtres -- */
     .filtres{
         padding-left: 0.875rem;
@@ -554,6 +562,9 @@ footer li{
     /* -- Général -- */
     /* -- En-tête -- */
     /* -- Recherche - Formulaire -- */
+    .p__field{
+        width: 50%;
+    }
     /* -- Recherche - Filtres -- */
     /* -- Recherche - Nombre de résultats obtenus -- */
     /* -- Mise en forme d'une carte par défaut -- */
@@ -587,12 +598,9 @@ footer li{
         white-space: nowrap;
     }
 */
-
     .carte--activite h3{
-       font-size: 0.85rem;
         line-height: 1.3rem;
         margin: 0.8rem;
-        
     }
     .carte--activite img{
         border: none;
@@ -639,6 +647,44 @@ footer li{
     }
     /* -- En-tête -- */
     /* -- Recherche - Formulaire -- */
+    .form__field{
+        padding-right: 2.5rem;
+    }
+    .form__btn{
+        width: 3.25rem;
+        height: 3.12rem;
+        border-radius: 1rem;
+        margin-top: 0px;
+        margin-left: -1.9rem;
+        padding-top: 0.3rem;
+    }
+    #textsearch{
+        display: none;
+    }
+/*
+    .form__ico{
+        width: 4rem;
+        height: 2rem;
+        border-radius: 1rem 0 0 1rem;
+        background-color: #F2F2F2;
+        text-align: center;
+        padding-top: 1.15rem;
+    }
+    .p__field{
+        height: 3rem;
+        border: 1px solid #F2F2F2;
+        border-right: none;
+    }
+    .form__field{
+        height: 3rem;
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+        border: none;
+        padding-left: 1rem;
+        width: 100%;
+    }
+*/
+
     /* -- Recherche - Filtres -- */
     /* -- Recherche - Nombre de résultats obtenus -- */
     /* -- Mise en forme d'une carte par défaut -- */
@@ -658,7 +704,6 @@ footer li{
         margin: 1.8rem 0 3rem 0;
     }
     .plus{
-        font-size: 1.1rem;
         margin-bottom: 0.6rem;
     }
     /* -- Activités -- */
@@ -667,72 +712,164 @@ footer li{
 
 
 @media screen and (min-width: 1024px){
-    /* -- Général -- */
-    .body{
-        font-size: 0.8rem;
-    }
-    .container{
-        padding: 0 3.125rem 0 3.125rem;
-        margin: auto;
-    }  
-    h1{
-        font-size: 1.1rem;
-    }
-    h2{
+    /* -- Font-Size -- */
+    
+    h1, h2, .populaires__head .fas{
         font-size: 1rem;
     }
+    body, .filtres h4, .filtres li, .form__field, .form__btn{
+        font-size: 0.8rem;
+    }
+    .slogan p, .nb-resultats data, .plus, footer li{
+        font-size: 0.8rem;
+    }
+    .carte__infos h3, .fa-info{
+        font-size: 0.7rem;
+    }
+     .filtre-ico,.form__ico, .carte__infos{
+        font-size: 0.65rem;
+    } 
+    .etoiles{
+        font-size: 0.55rem;
+    }
+    .carte--populaire .etoiles{
+        font-size: 0.5rem;
+    }
+    /* -- Général -- */
+    .container{
+    /*padding: 0 2.125rem 0 2.125rem;*/
+    padding: 0 1.75rem 0 1.75rem;
+
+    margin: auto;
+    }  
     /* -- En-tête -- */
     #logo img{
         height: 2.2rem;
     }
-    nav, .inscription, p{
-        font-size: 0.8rem;
+
+    /* -- Recherche - Formulaire -- */
+    .form__ico{
+        width: 2.5rem;
+        height: 1.68rem;
+        border-radius: 1rem 0 0 1rem;
+        padding-top: 1rem;
+        padding-left: 0.1rem;
+    }
+    .p__field{
+        width: 11.5rem;
+        height: 2.5rem;
+    }
+    .form__field{
+        height: 2.5rem;
+    }
+    #icosearch{
+        display: none;
+    }
+    .form__btn{
+        width: 6.5rem;
+        height: 2.65rem;
+        font-weight: bold;
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    /*
+    .p__field{
+        height: 3rem;
+        border: 1px solid #F2F2F2;
+        border-right: none;
+    }
+    .form__field{
+        height: 3rem;
+        padding-left: 1rem;
+        width: 100%;
+    }*/
+
+    /* -- Recherche - Filtres -- */
+    /*.filtres ul {
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: bold;
+        list-style-type: none;
+        margin-left: 0;
+        margin-bottom: 0;
+    }*/
+    .filtre-ico{
+        padding: 0.525rem 0.4rem 0.45rem 0.4rem;
+        margin-left: -1.05rem;
+        margin-right: 0.6rem;
+    }
+    .filtres li{
+        height: 1rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        margin-right: 1rem;
+        border: 2px solid #d9d9d9;
+        border-left: none;
+        border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+    .filtres li:hover{
+        color: #FFFFFF;
+        background-color: #0065FC;
+        border-color: #0065FC;
+    }
+    /* -- Mise en forme d'une carte par défaut -- */
+    #hebergements .carte{
+        width: 29%;
+    }
+    #hebergements .carte__img{
+        height: 5rem;
     }
     
-    /* -- Mise en forme d'une carte par défaut -- */
-    .carte__img{
-        height: 7.125rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
-    }
     /* -- Mise en forme d'une carte pour hébergement populaire -- */
     .carte--populaire .carte__img{
-        width: 7rem;  
-        height: 7.5rem;
+        width: 5.7rem;  
+        height: 6.1rem;
+    }
+    .carte--populaire h3{
+        padding-bottom: 0.3rem;
     }
     .carte--populaire .carte__infos{
-        width: 12rem;
+        width: 8rem;
+        margin-left: 1rem;
     }
     .carte--populaire .carte__infos .tarif{
         white-space: nowrap;
     }
     /* -- Résultats de la recherche -- */
+    #hebergements, .populaires{
+        border-radius: 1rem; 
+    }
+    .resultats{
+        flex-direction: row;
+        align-items: stretch;
+    }
     #hebergements{
         order: 1;
-        flex: 1;
-        border-radius: 1.5rem;
+       /* width: 75%;*/
         background-color: #F2F2F2;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+        padding-bottom: 1.875rem;
+        margin-left: 0;
     }
     .populaires{
         order: 2;
-        width: 28%;
+        width: 25%;
         margin-left: 2rem;
-        border-radius: 1.5rem;
+        margin-right: 0;
+        padding-left: 1.55rem;
+        padding-right: 1.8rem;
+    }
+    .populaires__conteneur{
+        padding-top: 0;
+        margin-top: 0;
     }
     #hebergements, .populaires, #activites{
-        padding-top: 2.875rem;
-    }
-    #hebergements{
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        padding-bottom: 2.875rem;
-    } 
-    .populaires{
-        padding-left: 2.25rem;
-        padding-right: 2.5rem;
+        padding-top: 1.875rem;
     } 
     #activites{
         padding-left: 0;
         padding-right: 0;
-        padding-bottom: 3.75rem;
+        padding-bottom: 1.75rem;
     } 
     .hebergements__conteneur{
         margin-top: 1.375rem;
