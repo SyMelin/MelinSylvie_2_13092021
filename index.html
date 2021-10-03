@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <!-- Information générale -->
+        <!-- Informations générales -->
         <title>Reservia</title>
-        <!-- Viewport> -->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-       
         <meta charset="utf-8" />
-        <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve" /> <!-- Description du site qui apparait en dessous du titre de la page lors d'une recherche sur moteur de recherche -->
-        
-        <!-- Liens vers le fichier CSS et, le cas-échéant, les sites d'icônes (icone qui apparait dans la fenêtre, à côté du titre de la page)-->
-       <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
-       <link rel="stylesheet" type="text/css" href="style_de_base.css" />
-       <link rel="stylesheet" type="text/css" media="screen and (max-width: 767px)" href="767.css" />
-        <link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="768.css" />
-        <link rel="stylesheet" type="text/css" media="screen and (min-width: 768px) and (max-width: 1023px)" href="768_1023.css" />
-        <link rel="stylesheet" type="text/css" media="screen and (max-width: 1023px)" href="1023.css" />
-        <link rel="stylesheet" type="text/css" media="screen and (min-width: 1024px)" href="1024.css" />
-
+        <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve" /> <!-- Description du site qui apparait sous le titre de la page lors d'une recherche sur moteur de recherche -->
+       
+        <!-- Lien vers le fichier style-->
+        <link rel="stylesheet" type="text/css" href="style_de_base.css" />
+       
         <!-- Lien pour la font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,14 +18,10 @@
         <!-- Lien donné par W3C pour les icônes -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-
-        <!-- FACEBOOK metadata -->
-        <!-- TWITTER metadata -->
-
     </head>
     <body>
 
-        <!-- Conteneur global -->
+        <!-- Conteneur global qui englobe tout sauf le footer -->
         <div class="container">
             
 
@@ -96,7 +84,7 @@
                 </div>
                 
                 <!-- Nombre de résultats obtenus -->
-                <p class="nb-resultats"><i class="fas fa-info fa-fw"></i><data value="500">Plus de 500 logements sont disponibles dans cette ville</data></p> <!--s génériques à afficher, comme le nombre de client convertis par votre logiciel ou le nombre d’inscrits à votre newsletter. -->
+                <p class="nb-resultats"><i class="fas fa-info fa-fw"></i><data value="500">Plus de 500 logements sont disponibles dans cette ville</data></p> <!--data pour données génériques à afficher, comme le nombre de client convertis par un logiciel ou le nombre d’inscrits à une newsletter. -->
 
             </section>
             
@@ -110,15 +98,15 @@
 
                     <!-- Conteneur regroupant toutes les cartes d'hébergements trouvées -->
                     <div class="hebergements__conteneur">
-                        <a class="carte--hebergement carte" href="#">
+                        <a class="carte carte--hebergement" href="#">
                             <img class="carte__img" src="images/hebergements/auberge_la_cannebiere.png" alt="Visitez le site de Auberge La Cannebière" />
                             <div class="carte__infos">
                                 <h3>Auberge la Cannebière</h3>
-                                <p>Nuit à partir de <em class="carte-prix">25</em><em class="carte-devise">€</em></p>
+                                <p>Nuit à partir de <em class="carte-prix">25</em><em class="carte-devise">€</em></p> <!-- em pour mettre en évidence le tarif très abordable et la devise -->
                                 <p class="etoiles"><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--estompe"></i></p>
                             </div>
                         </a>
-                        <a class="carte--hebergement carte" href="#">
+                        <a class="carte carte--hebergement" href="#">
                             <img class="carte__img" src="images/hebergements/hotel_du_port.png" alt="Visitez le site de Hôtel du port" />
                             <div class="carte__infos">
                                 <h3>Hôtel du port</h3>
@@ -126,7 +114,7 @@
                                 <p class="etoiles"><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i></p>
                             </div>
                         </a>
-                        <a class="carte--hebergement carte" href="#">
+                        <a class="carte carte--hebergement" href="#">
                             <img class="carte__img" src="images/hebergements/hotel_les_mouettes.png" alt="Visitez le site de Hôtel Les mouettes" />
                             <div class="carte__infos">
                                 <h3>Hôtel Les mouettes</h3>
@@ -134,7 +122,7 @@
                                 <p class="etoiles"><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--estompe"></i></p>
                             </div>
                         </a>
-                        <a class="carte--hebergement carte" href="#">
+                        <a class="carte carte--hebergement" href="#">
                             <img class="carte__img" src="images/hebergements/hotel_de_la_mer.png" alt="Visitez le site de Hôtel de la mer" />
                             <div class="carte__infos">
                                 <h3>Hôtel de la mer</h3>
@@ -142,7 +130,7 @@
                                 <p class="etoiles"><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--estompe"></i><i class="fas fa-star star--estompe"></i></p>
                             </div>
                         </a>
-                        <a class="carte--hebergement carte" href="#">
+                        <a class="carte carte--hebergement" href="#">
                             <img class="carte__img" src="images/hebergements/auberge_le_panier.png" alt="Visitez le site de Auberge Le Panier" />
                             <div class="carte__infos">
                                 <h3>Auberge Le Panier</h3>
@@ -150,7 +138,7 @@
                                 <p class="etoiles"><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--couleur"></i><i class="fas fa-star star--estompe"></i></p>
                             </div>
                         </a>
-                        <a class="carte--hebergement carte" href="#">
+                        <a class="carte carte--hebergement" href="#">
                             <img class="carte__img" src="images/hebergements/hotel_chez_amina.png" alt="Visitez le site de Hôtel chez Amina" />
                             <div class="carte__infos">
                                 <h3>Hôtel chez Amina</h3>
