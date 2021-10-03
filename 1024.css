@@ -1,0 +1,205 @@
+
+/* // MEDIA QUERIES // */
+
+@media screen and (min-width: 1024px){
+    /* -- Font-Size -- */
+    
+    h1, h2, .populaires__head .fas{
+        font-size: 1rem;
+    }
+    body, .filtres h4, .filtres li, .form__field, .form__btn{
+        font-size: 0.8rem;
+    }
+    .slogan p, .nb-resultats data, .plus, footer li{
+        font-size: 0.8rem;
+    }
+    .carte__infos h3, .fa-info, .carte--activite h3{
+        font-size: 0.7rem;
+    }
+     .filtre-ico,.form__ico, .carte__infos{
+        font-size: 0.65rem;
+    } 
+    .etoiles{
+        font-size: 0.55rem;
+    }
+    .carte--populaire .etoiles{
+        font-size: 0.5rem;
+    }
+    /* -- Général -- */
+    
+    /*.container{
+        padding: 0 2.75rem 0 2.75rem;
+        margin: auto;
+    }  
+    /* -- En-tête -- */
+    #logo img{
+        height: 2.2rem;
+    }
+    .slogan p{
+        margin-bottom: 0.8rem;
+    }
+    /* -- Recherche - Formulaire -- */
+    .form__ico{
+        width: 2.5rem;
+        height: 1.68rem;
+       /* border-radius: 1rem 0 0 1rem; */
+        padding-top: 1rem;
+        padding-left: 0.1rem;
+    }
+    .p__field{
+        width: 11.5rem;
+        height: 2.5rem;
+    }
+    .form__field{
+        height: 2.5rem;
+    }
+    #icosearch{
+        display: none;
+    }
+    .form__btn{
+        width: 6.5rem;
+        height: 2.65rem;
+        font-weight: bold;
+        border-radius: 0 1rem 1rem 0;
+    }
+    /* -- Recherche - Filtres -- */
+    .filtre-ico{
+        padding: 0.525rem 0.4rem 0.45rem 0.4rem;
+        margin-left: -1.05rem;
+        margin-right: 0.6rem;
+    }
+    .filtres li{
+        height: 1rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        margin-right: 1rem;
+    }
+    /* -- Recherche - Nombre de résultats obtenus -- */
+    /* -- Mise en forme d'une carte par défaut -- */
+    #hebergements .carte{
+        width: 28.5%;
+    }
+    #hebergements .carte__img{
+        height: 5rem;
+    }
+    
+    /* -- Mise en forme d'une carte pour hébergement populaire -- */
+    .carte--populaire .carte__img{
+        width: 5.7rem;  
+        height: 6.1rem;
+    }
+    .carte--populaire h3{
+        padding-bottom: 0.3rem;
+    }
+    .carte--populaire .carte__infos{
+        width: 8rem;
+        margin-left: 1rem;
+    }
+    .carte--populaire .carte__infos .tarif{
+        white-space: nowrap;
+    }
+    /* -- Résultats de la recherche -- */
+    #hebergements, .populaires{
+        border-radius: 1rem; 
+    }
+    .resultats{
+        flex-direction: row;
+        align-items: stretch;
+    }
+    #hebergements{
+        order: 1;
+       /* width: 75%;*/
+        background-color: #F2F2F2;
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+        padding-bottom: 1.875rem;
+        margin-left: 0;
+    }
+    .populaires{
+        order: 2;
+        width: 25%;
+        margin-left: 2rem;
+        margin-right: 0;
+        padding-left: 1.55rem;
+        padding-right: 1.8rem;
+    }
+    .populaires__conteneur{
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .hebergements__conteneur{
+        margin-top: 1.375rem;
+        display: flex;
+        flex-flow: wrap row;
+        gap: 1.25rem;
+    }
+    .populaires__conteneur{
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+    .plus{
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
+    .hebergements__conteneur .carte{
+        width: 12rem;
+    }
+    #hebergements, .populaires, #activites{
+        padding-top: 1.875rem;
+    } 
+    #activites{
+        margin-top: 1rem;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 1.75rem;
+    } 
+    .carte--activite{
+        padding: 0;
+        margin-top: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100.5%;
+        height: 100%;
+        margin: 0;
+    }
+    .carte--activite h3{
+        line-height: 1.3rem;
+        margin-left: 1rem;
+        margin-right: auto;
+        padding-left: 0;
+    }
+    .carte--activite img{
+        border: none;
+        height: 50%;
+        flex: 1;
+    }
+    /* -- Activités -- */
+    
+    .activites__conteneur{
+        margin-top: 1rem;
+        display: grid;
+        grid-template: repeat(10, 0.8em) / repeat(4, 1fr);
+        grid-gap: 2rem;
+    }
+    #one{
+        grid-row: 1 / 11;
+    }
+    #two{
+        grid-row: 1 / 7;
+    }
+    #three{
+        grid-row: 7 / 11;
+    }
+    #four{
+        grid-row: 1 / 11;
+    }
+    #five{
+        grid-row: 1 / 6;
+    }
+    #six{
+        grid-row: 6 / 11;
+    }
+    /* -- Pied-de-page -- */
+}

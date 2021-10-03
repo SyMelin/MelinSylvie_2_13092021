@@ -1,0 +1,285 @@
+/* // CSS valable quelque soit le support // */
+
+/* --Font-size -- */
+body{
+    font-size: 0.9rem;
+}
+h1, h2, .populaires__head .fas{
+    font-size: 1.3rem;
+}
+.form__field{
+    font-size: 1rem;
+}
+.filtres-ico, .filtres li, .carte__infos h3, .carte--activite h3, footer li{
+    font-size: 0.9rem;
+}
+.nb-resultats data{
+    font-size: 0.85rem;
+}
+.form__ico,.carte__infos{
+    font-size: 0.8rem;
+}
+.etoiles{
+    font-size: 0.75rem;
+}
+.fa-info{
+    font-size: 0.7rem;
+}
+.carte--populaire .etoiles{
+    font-size: 0.65rem;
+}
+
+/* -- Général -- */
+body{
+    background-color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+}
+.container, .footer__conteneur{
+    max-width: 1199px; /*Largeur d'écran max pour ordinateur moyen*/
+    margin: auto;
+    /*border: 1px solid black;*/
+}
+.populaires, footer{
+    background-color: #f2f2f2;
+}
+#hebergements h2, .populaires__head, #activites h2{
+    margin: 0;
+}
+h1, h2{
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style-type: none;
+}
+.recherche{
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+}
+
+/* -- En-tête -- */
+.header__top{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+}
+#logo img{
+    height: 2.8rem;
+    width: auto; /* garde le ration lors du redimensionnement de l'image */
+}
+nav ul{
+    display: flex;
+    padding-left: 0%;
+}
+nav a{
+    display: block;
+    border-top: 0.2rem solid #FFFFFF;
+}
+#inscription{
+    margin-left: 1.2rem;
+}
+#inscription a{
+    color: #0065FC;
+    font-weight: bold;
+    text-align: right;
+}
+/* -- Recherhe -- */
+/* -- Recherche - Formulaire -- */
+form{
+    display: flex;
+    align-items: center;
+}
+
+.form__ico{
+    border-radius: 1rem 0 0 1rem;
+    background-color: #F2F2F2;
+    text-align: center;
+}
+.p__field{
+   /* height: 3rem;*/
+    border: 1px solid #F2F2F2;
+    border-right: none;
+}
+.form__field{
+  /*  height: 3rem;*/
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    border: none;
+    padding-left: 1rem;
+    width: 100%;
+}
+.form__field:focus{
+    outline: 1px solid #0065FC;
+}
+    /* Attention : Removing outlines in CSS creates issues for people navigating the web with a keyboard. */
+    /* Problème d'accessibilité également pour les personnes utilisant un screen readers : elles ne pourront pas voir où se trouve le pointeur */
+    /* Il faut le remplacer par un autre indicateur */
+.form__btn{
+    color: #FFFFFF;
+    background-color: #0065FC;
+    border: 1px solid #0065FC;
+}
+
+/* -- Recherche - Filtres -- */
+.filtres ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    list-style-type: none;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+.filtre-ico{
+    background-color: #deebff;
+    border: 4px solid #deebff;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    color: #0065FC;
+}
+.filtres li{
+    border: 2px solid #d9d9d9;
+    border-left: none;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+.filtres li:hover{
+    color: #FFFFFF;
+    background-color: #0065FC;
+    border-color: #0065FC;
+}
+
+/* -- Recherche - Nombre de résultats obtenus -- */
+.nb-resultats{
+    margin-top: 0.5;
+}
+.nb-resultats data{
+    display: block;
+    padding-top: 0.4rem;
+}
+.fa-info{
+    color: #0065FC;
+    padding: 0.275rem 0.2rem 0.275rem 0.2rem;
+    margin-right: 0.5rem;
+    margin-top: 0.2rem;
+    float: left;
+    border: 1px solid #d9d9d9;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;  
+}
+
+/* -- Mise en forme d'une carte par défaut -- */
+.carte{
+    display: block;
+    height: auto;
+    border: 1px solid #F2F2F2;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #d9d9d9;
+    padding: 0.3rem;
+    background-color: #FFFFFF;
+}
+.carte__img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.8rem 0.8rem 0 0;
+}
+.carte__infos{
+    margin-left: 0.6rem;
+}
+.carte__infos h3,.carte__infos p{
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+}
+.carte-prix, .carte-devise{
+    font-weight: bold;
+    font-style: normal;
+}
+.etoiles{
+    letter-spacing: 0.075rem;
+}
+.star--couleur{
+    color: #0065FC;
+}
+.star--estompe{
+    color: #d9d9d9;
+}
+
+/* -- Mise en forme d'une carte pour hébergement populaire -- */
+.carte--populaire{
+    display: flex;
+}
+.carte--populaire .carte__img{
+    border-radius: 0.8rem 0 0 0.8rem;
+}
+.carte--populaire .carte__infos{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+.carte--populaire h3, .carte--populaire .tarif, .carte--populaire .etoiles{
+    margin: 0;
+}
+.carte--populaire h3{
+    padding-top: 0.6rem;
+    padding-bottom: 0.5rem;
+}
+.carte--populaire .tarif{
+    flex: 1;
+}
+.carte--populaire .etoiles{
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.075rem;
+}
+
+/*Mise en forme d'une carte d'activité */
+.carte--activite{
+    padding: 0;
+    margin-top: 1.25rem;
+}
+.carte__img{
+    margin-top: -0.1rem;
+    margin-left: -0.025rem;
+    width: 100.5%
+}
+.carte--activite h3{
+    padding-left: 1rem;
+    padding-top: 0.1rem;
+}
+
+/* -- Résultats de la recherche -- */
+.resultats{
+    display: flex;
+}
+.plus{
+    font-weight: bold;
+}
+.populaires__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.populaires h2, .populaires__head .fas{
+    margin:0;
+}
+
+/* -- Activités -- */
+/* -- Pied-de-page -- */
+footer{
+    padding-top: 2.9rem;
+    padding-bottom: 0.125rem;
+  /*  margin: 0 -0.5rem -0.5rem 0; /* Sinon, espace entre bordure .container et éléments intérieurs */ 
+}
+footer h3{
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+}
+footer ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+footer li{
+    line-height: 1.8rem;
+}
