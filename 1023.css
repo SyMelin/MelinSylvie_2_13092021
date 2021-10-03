@@ -13,6 +13,7 @@
         padding-right: 1.25rem;
     }
     /* -- En-tête -- */
+   
     /* -- Recherhe -- */
     /* -- Recherche - Formulaire -- */
     .form__ico{
@@ -49,7 +50,7 @@
         margin: 0 0.7rem 0.8rem 0;
     }
     /* -- Recherche - Nombre de résultats obtenus -- */
-    /* -- Mise en forme d'une carte par défaut -- */
+    /* -- Mise en forme d'une carte hébergement résultat -- */
     /* -- Mise en forme d'une carte pour hébergement populaire -- */
     /* -- Résultats de la recherche -- */
     #hebergements, .populaires, #activites{
@@ -62,7 +63,6 @@
     .populaires__conteneur{
         margin: 1.5rem 0rem 2.25rem 0rem;
     }
-   
     .plus{
         margin-bottom: 0.6rem;
     }

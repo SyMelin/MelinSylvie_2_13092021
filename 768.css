@@ -1,120 +1,3 @@
-/* // MEDIA QUERIES // */
-
-@media screen and (max-width: 767px){
-    /* -- Général -- */
-    /* -- En-tête -- */
-    .header__top{
-        margin-top: 1.75rem;
-    }
-    #logo{
-        order: 1;
-        min-width: 65%;
-    }
-    nav{
-        order: 3;
-        flex: 3;
-        margin: auto -1.2rem auto -1.2rem;
-    }
-    nav li{
-        width: 50%;
-        text-align: center;
-    }
-    nav a{
-        border-bottom: 0.2rem solid #f2f2f2;
-        padding-bottom: 0.8rem;
-    }
-    nav a:hover{
-        color: #0065FC;
-        border-bottom: 0.2rem solid #0065FC;
-    }
-    #inscription{
-        order: 2;
-        width: 25%;
-        /*text-align: right;*/
-        padding-top: 0.25rem;
-    }
-    /* -- Recherche -- */
-    /* -- Recherche - Formulaire -- */
-    .p__field{
-        width: 100%;
-    }
-    /* -- Recherche - Filtres -- */
-    .filtres h4{
-        margin-bottom: 0;
-    }
-    /* -- Recherche - Nombre de résultats obtenus -- */
-    /* -- Mise en forme d'une carte par défaut -- */
-    .carte__img{
-        height: 6.6rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
-    }
-    /* -- Mise en forme d'une carte pour hébergement populaire -- */
-    .carte--populaire .carte__img{
-        width: 38%;
-        height: 8rem;
-    }
-    .carte--populaire .carte__infos{
-        margin-left: 1.25rem;
-        width: 42%;
-    }
-    .carte--populaire .carte__infos .tarif{
-        white-space: nowrap;
-    }
-    /* -- Mise en forme d'une carte activité */
-    .carte--activite{
-        height: 11rem;
-        padding-bottom: 0;
-    }
-    .carte--activite .carte__img{
-        height: 71%;
-    }
-     /* -- Résultats de la recherche -- */
-    .resultats{
-        flex-flow: wrap column;
-    }
-    #hebergements{
-        order: 2;
-       /* border: 1px solid black;*/
-    }
-    .populaires{
-        order: 1;
-    }
-   .hebergements__conteneur{
-        display: flex;
-        flex-direction: column;
-        row-gap: 0.8rem;
-    }
-    .populaires__conteneur{
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: column;
-        row-gap: 0.8rem;
-    }
-    /* -- Activités -- */
-    #activites{
-        margin-bottom: 3rem;
-    }
-    .activites__conteneur{
-        display: flex;
-        flex-direction: column;
-        row-gap: 0.2rem;
-    }
-    /* -- Pied-de-page -- */
-    footer{
-       /* margin-left: -0.5rem; /* Sinon, espace entre bordure container et éléments intérieurs */
-       /* margin-right: -0.5rem;*/ /* Sinon, espace entre bordure container et éléments intérieurs */}
-/*}*/
-    footer div{
-        margin-bottom: 2rem;
-    }
-    footer ul{
-        margin-bottom: 1rem;
-    }
-    .nos_hebergements{
-        margin-bottom: 2.5rem;
-    }
-}
-
-
 @media screen and (min-width: 768px){
 
     /* -- Général -- */
@@ -166,15 +49,14 @@
     .filtres h4{
         margin-right: 2rem;
     }
-    /* -- Recherche - Nombre de résultats obtenus -- */
-    /* -- Recherche - Nombre de résultats obtenus -- */
+        /* -- Recherche - Nombre de résultats obtenus -- */
     .nb-resultats{
         padding-left: 0.625rem;
     }
-    /* -- Mise en forme d'une carte par défaut -- */
+    /* -- Mise en forme d'une carte hebergement resultat*/
     /* -- Mise en forme d'une carte pour hébergement populaire -- */
     /* -- Résultats de la recherche -- */
-    .plus{
+    /*.plus{
         margin-top: 2.625rem;
     }
     /* -- Activités -- */

@@ -11,22 +11,21 @@
     }
     /* -- Recherche - Filtres -- */
     /* -- Recherche - Nombre de résultats obtenus -- */
-    /* -- Mise en forme d'une carte par défaut -- */
-    .hebergements__conteneur .carte{
+    /* -- Mise en forme d'une carte hebergement résultat -- */
+    .carte--hebergement{
         width: 30%;
     }
-    .carte__img{
-        height: 7rem; /* !!!!Si problème de hauteur au niveau visuel, c'est cette hauteur qu'il faut changer */
+    .carte--hebergement .carte__img{
+        height: 7rem; 
     }
     /* -- Mise en forme d'une carte pour hébergement populaire -- */
     .carte--populaire{
         width: 31%;
-        justify-content: stretch;
+       /* justify-content: stretch;*/
     }
     .carte--populaire .carte__img{
         width: 38.5%;
-        height: 6.5rem;
-        
+        height: 6.5rem; 
     }
     .carte--populaire h3{
         height: 1.5rem;
@@ -42,19 +41,6 @@
         white-space: nowrap;
     }
 */
-    .carte--activite h3{
-        line-height: 1.3rem;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 0.3rem;
-        padding-right: 0.3rem;
-        text-align: center;
-    }
-    .carte--activite img{
-        border: none;
-        height: 50%;
-    }
-
     /* -- Résultats de la recherche -- */
     .resultats{
             flex-flow: wrap column;
@@ -78,6 +64,20 @@
         justify-content: space-between;
         gap: 0.5rem;
     }
+    /* -- Mise en forme d'une carte activité -- */
+    .carte--activite h3{
+        line-height: 1.3rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+        text-align: center;
+    }
+    .carte--activite .carte__img{
+        border: none;
+        height: 50%;
+        flex: 1;
+    }
     /* -- Activités -- */
     .activites__conteneur{
         margin: 1.8rem 0 3rem 0;
@@ -89,9 +89,6 @@
         width: 100.5%;
         height: 100%;
         margin: 0;
-    }
-    .carte--activite .carte__img{
-        flex: 1;
     }
     .activites__conteneur{
         display: grid;
@@ -116,8 +113,6 @@
     #six{
         grid-row: 6 / 11;
     }
-    /* -- Pied-de-page -- */
-
     /* -- Pied-de-page -- */
 }
 
