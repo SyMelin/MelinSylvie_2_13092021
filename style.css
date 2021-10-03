@@ -516,7 +516,7 @@ footer li{
     }
     .activites__conteneur{
         display: grid;
-        grid-template: repeat(10, 1.5em) / repeat(4, 1fr);
+        grid-template: repeat(10, 1em) / repeat(4, 1fr);
         grid-gap: 1.5rem;
     }
     #one{
@@ -574,7 +574,9 @@ footer li{
         
     }
     .carte--populaire h3{
-        height: 1.75rem;
+        height: 1.5rem;
+        padding-top: 0.4rem;
+        padding-bottom: 1rem;
     }
     .carte--populaire .carte__infos{
         width: 8rem;
@@ -584,6 +586,19 @@ footer li{
     /*.carte--populaire .carte__infos .tarif{
         white-space: nowrap;
     }
+*/
+
+    .carte--activite h3{
+       font-size: 0.85rem;
+        line-height: 1.3rem;
+        margin: 0.8rem;
+        
+    }
+    .carte--activite img{
+        border: none;
+        height: 50%;
+    }
+
     /* -- Résultats de la recherche -- */
     .resultats{
             flex-flow: wrap column;
@@ -592,11 +607,12 @@ footer li{
     #hebergements{
         order: 2;
     }
-    /*.hebergements__conteneur{
+    .hebergements__conteneur{
         display: flex;
         flex-flow: wrap row;
         justify-content: space-around;
-    }*/
+        gap: 1rem;
+    }
     .populaires{
         order: 1;
     }
@@ -737,5 +753,28 @@ footer li{
         width: 12rem;
     }
     /* -- Activités -- */
+    .activites__conteneur{
+        display: grid;
+        grid-template: repeat(10, 1.5em) / repeat(4, 1fr);
+        grid-gap: 1.5rem;
+    }
+    #one{
+        grid-row: 1 / 11;
+    }
+    #two{
+        grid-row: 1 / 7;
+    }
+    #three{
+        grid-row: 7 / 11;
+    }
+    #four{
+        grid-row: 1 / 11;
+    }
+    #five{
+        grid-row: 1 / 6;
+    }
+    #six{
+        grid-row: 6 / 11;
+    }
     /* -- Pied-de-page -- */
 }
