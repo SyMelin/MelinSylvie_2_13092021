@@ -117,7 +117,7 @@ form{
 .form__btn{
     color: #FFFFFF;
     background-color: #0065FC;
-    border: 1px solid #0065FC;
+    border: none;
 }
 
 /* ----- Recherche - Filtres ----- */
@@ -594,7 +594,7 @@ footer li{
         padding-right: 2.5rem;
     }
     .form__field, .form__btn{
-        height: 2.9rem;
+        height: 3rem;
     }
     .form__btn{
         width: 3.25rem;
