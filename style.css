@@ -334,8 +334,8 @@ footer li{
         height: 8rem;
     }
     .carte--populaire .carte__infos{
-        margin-left: 1.25rem;
-        width: 42%;
+        margin-left: 7%;
+        width: 54%;
     }
     .carte--populaire .carte__infos .tarif{
         white-space: nowrap;
