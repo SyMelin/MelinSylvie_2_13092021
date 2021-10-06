@@ -10,13 +10,17 @@ h1, h2, .populaires__head .fas{
 .form__field{
     font-size: 1rem;
 }
-.filtres-ico, .filtres li, .carte__infos h3, .carte--activite h3, footer li{
+/*.filtre__ico*/ .filtres li, .carte__infos h3, .carte--activite h3, footer li{
     font-size: 0.9rem;
 }
 .nb-resultats data{
     font-size: 0.85rem;
 }
-.form__ico,.carte__infos{
+.form__ico{
+    transform: scaleY(1.1);
+    font-size: 1rem;
+}
+.carte__infos{
     font-size: 0.8rem;
 }
 .etoiles{
@@ -54,6 +58,25 @@ a{
 ul{
     list-style-type: none;
 }
+/*.filtres .fas {
+    transform: scaleY(1.15);
+}*/
+.fa-money-bill-wave{
+    transform: scaleY(1.3);
+    font-size: 0.7rem;
+}
+.fa-child{
+    font-size: 1rem;
+}
+.fa-heart{
+    transform:scaleY(1.1);
+    font-size: 0.9rem;
+}
+.fa-dog{
+    transform: scaleY(1.1);
+    font-size: 0.9rem;
+}
+
 .recherche{
     padding-top: 0;
     padding-bottom: 1.5rem;
@@ -95,6 +118,7 @@ form{
     display: flex;
     align-items: center;
 }
+
 .form__ico{
     border-radius: 1rem 0 0 1rem;
     background-color: #F2F2F2;
@@ -129,7 +153,7 @@ form{
     margin-left: 0;
     margin-bottom: 0;
 }
-.filtre-ico{
+.filtre__ico{
     background-color: #deebff;
     border: 4px solid #deebff;
     border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
@@ -587,7 +611,7 @@ footer li{
     /* ----- Recherche - Formulaire -----*/
     .form__ico{
         width: 4rem;
-        height: 2rem;
+        height: 1.7rem;
         padding-top: 1.15rem;
     }
     .form__field{
@@ -608,7 +632,7 @@ footer li{
         display: none;
     }
     /* ----- Recherche - Filtres ----- */
-    .filtre-ico{
+    .filtre__ico{
         padding: 0.8rem 0.55rem 0.65rem 0.55rem;
         margin-left: -1rem;
         margin-right: 0.6rem;
@@ -654,9 +678,10 @@ footer li{
     .carte__infos h3, .fa-info, .carte--activite h3{
         font-size: 0.7rem;
     }
-     .filtre-ico,.form__ico, .carte__infos{
+     /*.filtre__ico,*/ /*#form__ico,*/ .carte__infos{
         font-size: 0.65rem;
-    } 
+    }
+    
     .etoiles{
         font-size: 0.55rem;
     }
@@ -687,8 +712,8 @@ footer li{
     /* ----- Recherche - Formulaire ----- */
     .form__ico{
         width: 2.5rem;
-        height: 1.68rem;
-        padding-top: 1rem;
+        height: 1.6rem;
+        padding-top: 0.8em;
         padding-left: 0.1rem;
     }
     .p__field{
@@ -708,15 +733,28 @@ footer li{
         border-radius: 0 1rem 1rem 0;
     }
     /* ----- Recherche - Filtres ----- */
-    .filtre-ico{
-        padding: 0.525rem 0.4rem 0.45rem 0.4rem;
+    .filtre__ico{
+        /*padding: 0.5rem 0.325rem 0.3rem 0.325rem;*/
         margin-left: -1.05rem;
         margin-right: 0.6rem;
+    }
+    #ico-money{
+        padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+    }
+    #ico-child{
+        padding: 0.5rem 0.275rem 0.3rem 0.275rem;
+    }
+    #ico-heart{
+        padding: 0.45rem 0.325rem 0.35rem 0.325rem;
+    }
+    #ico-dog{
+        padding: 0.45rem 0.325rem 0.35rem 0.325rem;
+ 
     }
     .filtres li{
         height: 1rem;
         padding: 0.5rem 1rem 0.5rem 1rem;
-        margin-right: 1rem;
+        margin-right: 0.9rem;
     }
     /* ----- Recherche - Nombre de résultats obtenus ----- */
     /* ----- Mise en forme d'une carte hébergement résultat ------ */
