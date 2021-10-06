@@ -613,13 +613,14 @@ footer li{
     }
     .form__field{
         padding-right: 2.5rem;
-    }
-    .form__field, .form__btn{
         height: 3rem;
     }
+    /*.form__field, .form__btn{
+        height: 3rem;3
+    }*/
     .form__btn{
         width: 3.25rem;
-        height: 3.12rem;
+        height: 3.13rem;
         border-radius: 1rem;
         margin-top: 0px;
         margin-left: -1.9rem;
