@@ -1,6 +1,6 @@
 /* ----- CSS de base ----- */
 
-/* ------ Font-size ------ */
+/* ------ Font-Size ------ */
 body{
     font-size: 0.9rem;
 }
@@ -10,15 +10,11 @@ h1, h2, .populaires__head .fas{
 .form__field{
     font-size: 1rem;
 }
-/*.filtre__ico*/ .filtres li, .carte__infos h3, .carte--activite h3, footer li{
+.filtres li, .carte__infos h3, .carte--activite h3, footer li{
     font-size: 0.9rem;
 }
 .nb-resultats data{
     font-size: 0.85rem;
-}
-.form__ico{
-    transform: scaleY(1.1);
-    font-size: 1rem;
 }
 .carte__infos{
     font-size: 0.8rem;
@@ -58,25 +54,15 @@ a{
 ul{
     list-style-type: none;
 }
-/*.filtres .fas {
-    transform: scaleY(1.15);
-}*/
 .fa-money-bill-wave{
     transform: scaleY(1.3);
-    font-size: 0.7rem;
-}
-.fa-child{
-    font-size: 1rem;
 }
 .fa-heart{
-    transform:scaleY(1.1);
-    font-size: 0.9rem;
+    transform: scaleY(1.1);
 }
 .fa-dog{
-    transform: scaleY(1.1);
-    font-size: 0.9rem;
+    transform: scaleY(1.2);
 }
-
 .recherche{
     padding-top: 0;
     padding-bottom: 1.5rem;
@@ -465,7 +451,8 @@ footer li{
     .filtres h4{
         margin-right: 2rem;
     }
-        /* ----- Recherche - Nombre de résultats obtenus ----- */
+    
+    /* ----- Recherche - Nombre de résultats obtenus ----- */
     .nb-resultats{
         padding-left: 0.625rem;
     }
@@ -598,6 +585,16 @@ footer li{
 
 @media screen and (max-width: 1023px){
 
+    /* ----- Font-Size ---- */
+    .fa-child{
+        font-size: 1.1rem;
+    }
+    .form__ico, .fa-heart, .fa-dog{
+        font-size: 1rem;
+    }
+    .fa-money-bill-wave{
+        font-size: 0.9rem;
+    }
     /* ----- Général ----- */
     .container{
         padding: 0;
@@ -611,8 +608,8 @@ footer li{
     /* ----- Recherche - Formulaire -----*/
     .form__ico{
         width: 4rem;
-        height: 1.7rem;
-        padding-top: 1.15rem;
+        height: 2.15rem;
+        padding-top: 1rem;
     }
     .form__field{
         padding-right: 2.5rem;
@@ -633,17 +630,33 @@ footer li{
     }
     /* ----- Recherche - Filtres ----- */
     .filtre__ico{
-        padding: 0.8rem 0.55rem 0.65rem 0.55rem;
+       /* padding: 0.8rem 0.55rem 0.65rem 0.55rem;*/
         margin-left: -1rem;
         margin-right: 0.6rem;
+    }
+    #ico-money{
+        padding: 0.775rem 0.75rem 0.65rem 0.75rem
+       /* padding: 0.4rem 0.425rem 0.4rem 0.425rem*/
+    }
+    #ico-child{
+        padding: 0.9rem 0.6rem 0.55rem 0.6rem
+       /* padding: 0.45rem 0.325rem 0.35rem 0.325rem*/
+    }
+    #ico-heart{
+        padding: 0.8rem 0.65rem 0.65rem 0.65rem
+        /*padding: 0.4rem 0.375rem 0.4rem 0.375rem*/
+    }
+    #ico-dog{
+        padding: 0.8rem 0.65rem 0.65rem 0.65rem
+       /* padding: 0.4rem 0.4rem 0.4rem 0.4rem*/
     }
     .filtres li{
         height: 1.55rem;
         padding: 0.925rem 1rem 0.275rem 0.95rem;
         margin: 0 0.7rem 0.8rem 0;
     }
-    /* ------ Recherche - Nombre de résultats obtenus ----- */
-    /* ------ Mise en forme d'une carte hébergement résultat ----- */
+    /* ----- Recherche - Nombre de résultats obtenus ----- */
+    /* ----- Mise en forme d'une carte hébergement résultat ----- */
     /* ----- Mise en forme d'une carte pour hébergement populaire ----- */
     /* ----- Résultats de la recherche ----- */
     #hebergements, .populaires, #activites{
@@ -669,19 +682,21 @@ footer li{
     h1, h2, .populaires__head .fas{
         font-size: 1rem;
     }
+    .form__ico, .fa-child{
+        font-size: 0.9rem;
+    }
     body, .filtres h4, .filtres li, .form__field, .form__btn{
         font-size: 0.8rem;
     }
-    .slogan p, .nb-resultats data, .plus, footer li{
+    .slogan p, .nb-resultats data, .fa-heart, .fa-dog, .plus, footer li{
         font-size: 0.8rem;
     }
-    .carte__infos h3, .fa-info, .carte--activite h3{
+    .fa-money-bill-wave, .carte__infos h3, .fa-info, .carte--activite h3{
         font-size: 0.7rem;
     }
-     /*.filtre__ico,*/ /*#form__ico,*/ .carte__infos{
+    .carte__infos{
         font-size: 0.65rem;
     }
-    
     .etoiles{
         font-size: 0.55rem;
     }
@@ -689,7 +704,6 @@ footer li{
         font-size: 0.5rem;
     }
     /* ----- Général ----- */
-    
     .container{
         padding: 0 2.75rem 0 2.75rem;
         margin: auto;
@@ -701,7 +715,6 @@ footer li{
         padding-left: 2.75rem;
         padding-right: 2.75rem;
     }
-
     /* ----- En-tête ----- */
     #logo img{
         height: 2.2rem;
@@ -712,8 +725,9 @@ footer li{
     /* ----- Recherche - Formulaire ----- */
     .form__ico{
         width: 2.5rem;
-        height: 1.6rem;
-        padding-top: 0.8em;
+        height: 1.68rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.2rem;
         padding-left: 0.1rem;
     }
     .p__field{
@@ -734,22 +748,21 @@ footer li{
     }
     /* ----- Recherche - Filtres ----- */
     .filtre__ico{
-        /*padding: 0.5rem 0.325rem 0.3rem 0.325rem;*/
         margin-left: -1.05rem;
         margin-right: 0.6rem;
+        width: 4rem;
     }
     #ico-money{
-        padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+        padding: 0.4rem 0.425rem 0.4rem 0.425rem
     }
     #ico-child{
-        padding: 0.5rem 0.275rem 0.3rem 0.275rem;
+        padding: 0.45rem 0.325rem 0.35rem 0.325rem
     }
     #ico-heart{
-        padding: 0.45rem 0.325rem 0.35rem 0.325rem;
+        padding: 0.4rem 0.375rem 0.4rem 0.375rem
     }
     #ico-dog{
-        padding: 0.45rem 0.325rem 0.35rem 0.325rem;
- 
+        padding: 0.4rem 0.4rem 0.4rem 0.4rem
     }
     .filtres li{
         height: 1rem;
