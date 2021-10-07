@@ -3,6 +3,7 @@
 /* ------ Font-Size ------ */
 body{
     font-size: 0.9rem;
+    margin: 0;
 }
 h1, h2, .populaires__head .fas{
     font-size: 1.3rem;
