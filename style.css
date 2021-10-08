@@ -154,7 +154,7 @@ form{
 .filtres li:hover{
     color: #FFFFFF;
     background-color: #0065FC;
-    border-color: #0065FC;
+    border-color: #0069fc;
 }
 
 /* ----- Recherche - Nombre de résultats obtenus ----- */
@@ -613,7 +613,7 @@ footer li{
         padding-top: 1rem;
     }
     .form__field{
-        padding-right: 2.5rem;
+        padding-right: 2rem;
         height: 3rem;
     }
     /*.form__field, .form__btn{
@@ -637,11 +637,11 @@ footer li{
         margin-right: 0.6rem;
     }
     #ico-money{
-        padding: 0.775rem 0.75rem 0.65rem 0.75rem
+        padding: 0.775rem 0.7rem 0.65rem 0.7rem
        /* padding: 0.4rem 0.425rem 0.4rem 0.425rem*/
     }
     #ico-child{
-        padding: 0.9rem 0.6rem 0.55rem 0.6rem
+        padding: 0.9rem 0.575rem 0.55rem 0.575rem
        /* padding: 0.45rem 0.325rem 0.35rem 0.325rem*/
     }
     #ico-heart{
