@@ -263,7 +263,6 @@ form{
 }
 .carte__img{
     margin-top: -0.1rem;
-   /* margin-left: -0.025rem;*/
     width: 100%
 }
 .carte--activite h3{
@@ -616,9 +615,6 @@ footer li{
         padding-right: 2rem;
         height: 3rem;
     }
-    /*.form__field, .form__btn{
-        height: 3rem;3
-    }*/
     .form__btn{
         width: 3.25rem;
         height: 3.13rem;
@@ -632,25 +628,20 @@ footer li{
     }
     /* ----- Recherche - Filtres ----- */
     .filtre__ico{
-       /* padding: 0.8rem 0.55rem 0.65rem 0.55rem;*/
         margin-left: -1rem;
         margin-right: 0.6rem;
     }
     #ico-money{
         padding: 0.775rem 0.7rem 0.65rem 0.7rem
-       /* padding: 0.4rem 0.425rem 0.4rem 0.425rem*/
     }
     #ico-child{
         padding: 0.9rem 0.575rem 0.55rem 0.575rem
-       /* padding: 0.45rem 0.325rem 0.35rem 0.325rem*/
     }
     #ico-heart{
         padding: 0.8rem 0.65rem 0.65rem 0.65rem
-        /*padding: 0.4rem 0.375rem 0.4rem 0.375rem*/
     }
     #ico-dog{
         padding: 0.8rem 0.65rem 0.65rem 0.65rem
-       /* padding: 0.4rem 0.4rem 0.4rem 0.4rem*/
     }
     .filtres li{
         height: 1.55rem;
